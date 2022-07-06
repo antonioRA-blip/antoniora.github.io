@@ -1,5 +1,12 @@
 ---
-title: "My Website"
+title: "Introduccion"
+output:
+  html_document:
+    code_download: true
+    toc: true
+    toc_float: true
+    theme: cosmo
 ---
-
-Hello, Website!
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```

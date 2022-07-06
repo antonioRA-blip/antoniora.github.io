@@ -1,9 +1,37 @@
-name: "my-holawebsite"
+name: "my_web_cite"
 output_dir: "."
 navbar:
-  title: "My Website"
+  title: "Inferencia Estadistica"
   left:
-    - text: "Home"
+    - text: "Introducion"
+      icon: fa-info
       href: index.html
-    - text: "About"
+    - text: "Terminos Estadisticos"
       href: about.html
+    - text: "Distribuciones"
+      menu:
+        - text: "Distribuciones Muestrales Poblacion Infinita"
+          href: distribucion1.html
+        - text: "Distribuciones Muestrales Poblacion finita"
+          href: distribucion2.html
+        - text: "Distribuciones muestral de proporciones"
+          href: distribucion3.html
+        - text: "Distribuciones muestral de diferencias de medias"
+          href: distribucion4.html
+        - text: "Distribuciones muestral de diferencias de proporciones"
+          href: distribucion5.html
+    - text: "Estimacion"
+      menu:
+        - text: "Estimacion Puntual"
+          href: estimacionP.html
+        - text: "Estimacion por Intervalos"
+          href: estimacionI.html
+        - text: "Estimacion de parametros por intervalos de confianza"
+          href: estimacionIC.html
+
+          
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+   
