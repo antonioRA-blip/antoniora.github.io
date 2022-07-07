@@ -29,7 +29,12 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
@@ -58,6 +63,11 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
 
 
 
@@ -225,7 +235,73 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
 
 
 
@@ -235,6 +311,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -313,6 +399,13 @@ $(document).ready(function () {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">Terminos Estadisticos</h1>
@@ -320,10 +413,113 @@ $(document).ready(function () {
 </div>
 
 
-<p>aqui que ago</p>
+<p><img src="imagenes/termEsta.jpg" /></p>
+<div id="parametro" class="section level1">
+<h1>Parametro</h1>
+<p>Un parametro estadistico es un numero que se obtiene a partir de los
+datos de una muestra estadistica. Los parametros estadisticos tambien se
+conocen como estadisticos descriptivos. <strong>sirven</strong> para
+sintetizar o resumir la informacion dada por una tabla o por una
+grafica. En otras palabras, dados unos pocos parametros estadisticos se
+puede tener una idea general de la distribucion de la informacion.
+<strong>dan</strong> un buen resumen cuando se conoce la distribucion de
+la poblacion. En particular, si la muestra proviene de una distribucion
+normal, entonces el promedio tipico y la desviacion estandar dan un buen
+resumen de la distribucion.</p>
+</div>
+<div id="estadigrafos" class="section level1">
+<h1>Estadigrafos</h1>
+<div id="estadigrafos-de-orden" class="section level2">
+<h2>1. Estadigrafos de orden</h2>
+<p>Son aquellos que dan informacion acerca del orden en la estructura de
+una muestra. Ya se han mencionado dos de ellos que aparecen en forma
+instantanea al ordenar la muestra: el maximo, X(n), y el minimo,
+X(1).</p>
+<p>Se llama percentil a cada uno de los numeros que dividen la muestra
+en 100 partes iguales. En consecuencia, ellos son 99 y se denotan por
+P(k), donde k es el orden del percentil indicado. Dado el percentil
+P(k), este divide la muestra en dos partes, la inferior que contiene el
+k% inferior de las observaciones y la superior que contiene el (100-k%)
+de las observaciones; entre dos percentiles consecutivos esta contenido
+el 1% de la muestra. El siguiente esquema grafica las definiciones
+anteriores:</p>
+</div>
+<div id="estadigrafos-de-tendencia-central" class="section level2">
+<h2>2. Estadigrafos de tendencia central</h2>
+<p>Cada vez que se observa un fenomeno cuantitativo, interesa saber si
+los datos recolectados se aglutinan en torno a ciertos valores
+representativos que son propios del fenomeno estudiado.</p>
+</div>
+</div>
+<div id="estadistica" class="section level1">
+<h1>Estadistica</h1>
+<p>La estadistica es fundamental para la investigacion, para el analisis
+de datos, con el fin de obtener resultados que sirvan como informacion
+para determinadas situaciones. Estos metodos estadisticos no se limitan,
+ya que los mismos pueden ser aplicados a cualquier campo que se desee
+estudiar. A pesar que la estadistica esta intimamente relacionada con la
+matematica tambien tiene su utilidad para el ambito social. Y en base a
+los estudios que se quieran realizar se debe hacer una diferenciacion
+entre los tipos de estadisticas.</p>
+</div>
+<div id="asimetria" class="section level1">
+<h1>Asimetria</h1>
+<p>Es la falta de simetria entre los datos de una distribucion. refire a
+la curva que forman los valores de la serie presenta la misma forma a la
+izquierda y derecha de un valor central (media aritmetica).</p>
+</div>
+<div id="la-mediana" class="section level1">
+<h1>La Mediana</h1>
+<p>Es aquel valor que divide la muestra en dos partes iguales, como se
+dijo anteriormente. Debe notarse que la mediana es un estadigrafo de
+orden y tambien de centralizacion.</p>
+</div>
+<div id="la-media-aritmetica-o-promedio-aritmetico"
+class="section level1">
+<h1>La Media aritmetica o Promedio aritmetico</h1>
+<p>Es el estadigrafo de tendencia central mas conocido, usado y abusado.
+Para todos es sabido que dada una coleccion de datos X1, X2, …., Xn, el
+promedio se define como la suma de los datos dividida por la cantidad de
+datos, y se denota por; en simbolos el promedio es:</p>
+<p><img src="imagenes/media.png" /></p>
+</div>
+<div id="rango-o-recorrido" class="section level1">
+<h1>Rango o Recorrido</h1>
+<p>Se define el rango o recorrido de los datos como el maximo menos el
+minimo, lo que en simbolos se expresa asi:</p>
+<p><strong>Rango = X(n) - X(1)</strong></p>
+</div>
+<div id="desviacion-estandar" class="section level1">
+<h1>Desviacion Estandar</h1>
+<p>Para definir la desviacion estandar, previamente presentaremos lo que
+se llama desviacion de un dato respecto al promedio, que denotamos por
+“di”:</p>
+<p><strong>d = X1 - X</strong></p>
+</div>
+<div id="hipotesis" class="section level1">
+<h1>Hipotesis</h1>
+<p>Cualquier teoria que formule posibles lineas de trabajo experimental.
+Ver hipotesis nula y alternativa.</p>
+</div>
+<div id="bibliografias" class="section level1">
+<h1>BIBLIOGRAFIAS</h1>
+<p><img src="imagenes/bibliografias.jpg" /></p>
+<p>*[<a
+href="https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib0900/Libro.pdf"
+class="uri">https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib0900/Libro.pdf</a>]</p>
+<p>*[<a
+href="http://www.dspace.uce.edu.ec/bitstream/25000/13720/3/Fundamentos%20B%C3%A1sicos%20de%20Estad%C3%ADstica-Libro.pdf"
+class="uri">http://www.dspace.uce.edu.ec/bitstream/25000/13720/3/Fundamentos%20B%C3%A1sicos%20de%20Estad%C3%ADstica-Libro.pdf</a>]</p>
+<p>*[<a
+href="http://intranet.comunidadandina.org/Documentos/Reuniones/DTrabajo/SG_REG_DIES_IV_dt%202.pdf"
+class="uri">http://intranet.comunidadandina.org/Documentos/Reuniones/DTrabajo/SG_REG_DIES_IV_dt%202.pdf</a>]</p>
+</div>
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlRlcm1pbm9zIEVzdGFkaXN0aWNvcyINCm91dHB1dDoNCiAgaHRtbF9kb2N1bWVudDoNCiAgICBjb2RlX2Rvd25sb2FkOiB0cnVlDQogICAgdG9jOiB0cnVlDQogICAgdG9jX2Zsb2F0OiB0cnVlDQogICAgdGhlbWU6IGNvc21vDQotLS0NCiFbXShpbWFnZW5lcy90ZXJtRXN0YS5qcGcpDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkNCmBgYA0KDQojIFBhcmFtZXRybw0KVW4gcGFyYW1ldHJvIGVzdGFkaXN0aWNvIGVzIHVuIG51bWVybyBxdWUgc2Ugb2J0aWVuZSBhIHBhcnRpciBkZSBsb3MgZGF0b3MgZGUgdW5hIG11ZXN0cmEgZXN0YWRpc3RpY2EuIExvcyBwYXJhbWV0cm9zIGVzdGFkaXN0aWNvcyB0YW1iaWVuIHNlIGNvbm9jZW4gY29tbyBlc3RhZGlzdGljb3MgZGVzY3JpcHRpdm9zLg0KKipzaXJ2ZW4qKiBwYXJhIHNpbnRldGl6YXIgbyByZXN1bWlyIGxhIGluZm9ybWFjaW9uIGRhZGEgcG9yIHVuYSB0YWJsYSBvIHBvciB1bmEgZ3JhZmljYS4gRW4gb3RyYXMgcGFsYWJyYXMsIGRhZG9zIHVub3MgcG9jb3MgcGFyYW1ldHJvcyBlc3RhZGlzdGljb3Mgc2UgcHVlZGUgdGVuZXIgdW5hIGlkZWEgZ2VuZXJhbCBkZSBsYSBkaXN0cmlidWNpb24gZGUgbGEgaW5mb3JtYWNpb24uDQoqKmRhbioqIHVuIGJ1ZW4gcmVzdW1lbiBjdWFuZG8gc2UgY29ub2NlIGxhIGRpc3RyaWJ1Y2lvbiBkZSBsYSBwb2JsYWNpb24uIEVuIHBhcnRpY3VsYXIsIHNpIGxhIG11ZXN0cmEgcHJvdmllbmUgZGUgdW5hIGRpc3RyaWJ1Y2lvbiBub3JtYWwsIGVudG9uY2VzIGVsIHByb21lZGlvIHRpcGljbyB5IGxhIGRlc3ZpYWNpb24gZXN0YW5kYXIgZGFuIHVuIGJ1ZW4gcmVzdW1lbiBkZSBsYSBkaXN0cmlidWNpb24uDQoNCiMgRXN0YWRpZ3JhZm9zDQoNCiMjIDEuIEVzdGFkaWdyYWZvcyBkZSBvcmRlbg0KU29uIGFxdWVsbG9zIHF1ZSBkYW4gaW5mb3JtYWNpb24gYWNlcmNhIGRlbCBvcmRlbiBlbiBsYSBlc3RydWN0dXJhIGRlIHVuYSBtdWVzdHJhLiBZYSBzZSBoYW4gbWVuY2lvbmFkbyBkb3MgZGUgZWxsb3MgcXVlIGFwYXJlY2VuIGVuIGZvcm1hIGluc3RhbnRhbmVhIGFsIG9yZGVuYXIgbGEgbXVlc3RyYTogZWwgbWF4aW1vLCBYKG4pLCB5IGVsIG1pbmltbywgWCgxKS4NCg0KU2UgbGxhbWEgcGVyY2VudGlsIGEgY2FkYSB1bm8gZGUgbG9zIG51bWVyb3MgcXVlIGRpdmlkZW4gbGEgbXVlc3RyYSBlbiAxMDAgcGFydGVzIGlndWFsZXMuIEVuIGNvbnNlY3VlbmNpYSwgZWxsb3Mgc29uIDk5IHkgc2UgZGVub3RhbiBwb3IgUChrKSwgZG9uZGUgayBlcyBlbCBvcmRlbiBkZWwgcGVyY2VudGlsIGluZGljYWRvLiBEYWRvIGVsIHBlcmNlbnRpbCBQKGspLCBlc3RlIGRpdmlkZSBsYSBtdWVzdHJhIGVuIGRvcyBwYXJ0ZXMsIGxhIGluZmVyaW9yIHF1ZSBjb250aWVuZSBlbCBrJSBpbmZlcmlvciBkZSBsYXMgb2JzZXJ2YWNpb25lcyB5IGxhIHN1cGVyaW9yIHF1ZSBjb250aWVuZSBlbCAoMTAwLWslKSBkZSBsYXMgb2JzZXJ2YWNpb25lczsgZW50cmUgZG9zIHBlcmNlbnRpbGVzIGNvbnNlY3V0aXZvcyBlc3RhIGNvbnRlbmlkbyBlbCAxJSBkZSBsYSBtdWVzdHJhLiBFbCBzaWd1aWVudGUgZXNxdWVtYSBncmFmaWNhIGxhcyBkZWZpbmljaW9uZXMgYW50ZXJpb3JlczoNCg0KIyMgMi4gRXN0YWRpZ3JhZm9zIGRlIHRlbmRlbmNpYSBjZW50cmFsDQpDYWRhIHZleiBxdWUgc2Ugb2JzZXJ2YSB1biBmZW5vbWVubyBjdWFudGl0YXRpdm8sIGludGVyZXNhIHNhYmVyIHNpIGxvcyBkYXRvcyByZWNvbGVjdGFkb3Mgc2UgYWdsdXRpbmFuIGVuIHRvcm5vIGEgY2llcnRvcyB2YWxvcmVzIHJlcHJlc2VudGF0aXZvcyBxdWUgc29uIHByb3Bpb3MgZGVsIGZlbm9tZW5vIGVzdHVkaWFkby4NCg0KIyBFc3RhZGlzdGljYQ0KTGEgZXN0YWRpc3RpY2EgZXMgZnVuZGFtZW50YWwgcGFyYSBsYSBpbnZlc3RpZ2FjaW9uLCBwYXJhIGVsIGFuYWxpc2lzIGRlIGRhdG9zLCBjb24gZWwgZmluIGRlIG9idGVuZXIgcmVzdWx0YWRvcyBxdWUgc2lydmFuIGNvbW8gaW5mb3JtYWNpb24gcGFyYSBkZXRlcm1pbmFkYXMgc2l0dWFjaW9uZXMuIEVzdG9zIG1ldG9kb3MgZXN0YWRpc3RpY29zIG5vIHNlIGxpbWl0YW4sIHlhIHF1ZSBsb3MgbWlzbW9zIHB1ZWRlbiBzZXIgYXBsaWNhZG9zIGEgY3VhbHF1aWVyIGNhbXBvIHF1ZSBzZSBkZXNlZSBlc3R1ZGlhci4gQSBwZXNhciBxdWUgbGEgZXN0YWRpc3RpY2EgZXN0YSBpbnRpbWFtZW50ZSByZWxhY2lvbmFkYSBjb24gbGEgbWF0ZW1hdGljYSB0YW1iaWVuIHRpZW5lIHN1IHV0aWxpZGFkIHBhcmEgZWwgYW1iaXRvIHNvY2lhbC4gWSBlbiBiYXNlIGEgbG9zIGVzdHVkaW9zIHF1ZSBzZSBxdWllcmFuIHJlYWxpemFyIHNlIGRlYmUgaGFjZXIgdW5hIGRpZmVyZW5jaWFjaW9uIGVudHJlIGxvcyB0aXBvcyBkZSBlc3RhZGlzdGljYXMuDQoNCiMgQXNpbWV0cmlhDQpFcyBsYSBmYWx0YSBkZSBzaW1ldHJpYSBlbnRyZSBsb3MgZGF0b3MgZGUgdW5hIGRpc3RyaWJ1Y2lvbi4gcmVmaXJlIGEgbGEgY3VydmEgcXVlIGZvcm1hbiBsb3MgdmFsb3JlcyBkZSBsYSBzZXJpZSBwcmVzZW50YSBsYSBtaXNtYSBmb3JtYSBhIGxhIGl6cXVpZXJkYSB5IGRlcmVjaGEgZGUgdW4gdmFsb3IgY2VudHJhbCAobWVkaWEgYXJpdG1ldGljYSkuDQoNCiMgTGEgTWVkaWFuYQ0KRXMgYXF1ZWwgdmFsb3IgcXVlIGRpdmlkZSBsYSBtdWVzdHJhIGVuIGRvcyBwYXJ0ZXMgaWd1YWxlcywgY29tbyBzZSBkaWpvIGFudGVyaW9ybWVudGUuIERlYmUgbm90YXJzZSBxdWUgbGEgbWVkaWFuYSBlcyB1biBlc3RhZGlncmFmbyBkZSBvcmRlbiB5IHRhbWJpZW4gZGUgY2VudHJhbGl6YWNpb24uDQoNCiMgTGEgTWVkaWEgYXJpdG1ldGljYSBvIFByb21lZGlvIGFyaXRtZXRpY28NCkVzIGVsIGVzdGFkaWdyYWZvIGRlIHRlbmRlbmNpYSBjZW50cmFsIG1hcyBjb25vY2lkbywgdXNhZG8geSBhYnVzYWRvLiBQYXJhIHRvZG9zIGVzIHNhYmlkbyBxdWUgZGFkYSB1bmEgY29sZWNjaW9uIGRlIGRhdG9zIFgxLCBYMiwgLi4uLiwgWG4sIGVsIHByb21lZGlvIHNlIGRlZmluZSBjb21vIGxhIHN1bWEgZGUgbG9zIGRhdG9zIGRpdmlkaWRhIHBvciBsYSBjYW50aWRhZCBkZSBkYXRvcywgeSBzZSBkZW5vdGEgcG9yOyBlbiBzaW1ib2xvcyBlbCBwcm9tZWRpbyBlczoNCg0KIVtdKGltYWdlbmVzL21lZGlhLnBuZykNCg0KIyBSYW5nbyBvIFJlY29ycmlkbw0KU2UgZGVmaW5lIGVsIHJhbmdvIG8gcmVjb3JyaWRvIGRlIGxvcyBkYXRvcyBjb21vIGVsIG1heGltbyBtZW5vcyBlbCBtaW5pbW8sIGxvIHF1ZSBlbiBzaW1ib2xvcyBzZSBleHByZXNhIGFzaToNCg0KKipSYW5nbyA9IFgobikgLSBYKDEpKioNCg0KIyBEZXN2aWFjaW9uIEVzdGFuZGFyDQpQYXJhIGRlZmluaXIgbGEgZGVzdmlhY2lvbiBlc3RhbmRhciwgcHJldmlhbWVudGUgcHJlc2VudGFyZW1vcyBsbyBxdWUgc2UgbGxhbWEgZGVzdmlhY2lvbiBkZSB1biBkYXRvIHJlc3BlY3RvIGFsIHByb21lZGlvLCBxdWUgZGVub3RhbW9zIHBvciAiZGkiOg0KDQoqKmQgPSBYMSAtIFgqKg0KDQojIEhpcG90ZXNpcw0KQ3VhbHF1aWVyIHRlb3JpYSBxdWUgZm9ybXVsZSBwb3NpYmxlcyBsaW5lYXMgZGUgdHJhYmFqbyBleHBlcmltZW50YWwuIFZlcg0KaGlwb3Rlc2lzIG51bGEgeSBhbHRlcm5hdGl2YS4NCg0KIyBCSUJMSU9HUkFGSUFTICAgICANCg0KIVtdKGltYWdlbmVzL2JpYmxpb2dyYWZpYXMuanBnKQ0KDQoqW2h0dHBzOi8vd3d3LmluZWkuZ29iLnBlL21lZGlhL01lbnVSZWN1cnNpdm8vcHVibGljYWNpb25lc19kaWdpdGFsZXMvRXN0L0xpYjA5MDAvTGlicm8ucGRmXQ0KDQoqW2h0dHA6Ly93d3cuZHNwYWNlLnVjZS5lZHUuZWMvYml0c3RyZWFtLzI1MDAwLzEzNzIwLzMvRnVuZGFtZW50b3MlMjBCJUMzJUExc2ljb3MlMjBkZSUyMEVzdGFkJUMzJUFEc3RpY2EtTGlicm8ucGRmXQ0KDQoqW2h0dHA6Ly9pbnRyYW5ldC5jb211bmlkYWRhbmRpbmEub3JnL0RvY3VtZW50b3MvUmV1bmlvbmVzL0RUcmFiYWpvL1NHX1JFR19ESUVTX0lWX2R0JTIwMi5wZGZdDQo=</div>
 
 
-
+</div>
+</div>
 
 </div>
 
@@ -355,7 +551,41 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("about.Rmd");
+});
+</script>
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
