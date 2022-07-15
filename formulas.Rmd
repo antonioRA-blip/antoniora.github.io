@@ -1,0 +1,82 @@
+---
+title: "FORMULAS"
+output:
+  html_document:
+    code_download: true
+    toc: true
+    toc_float: true
+    theme: cosmo
+---
+# MEDIDAS DESCRIPTIVAS
+![](imagenes/formula1.png)
+![](imagenes/formula2.png)
+
+# DISTRIBUCIONES DE PROBABILIDAD
+
+![](imagenes/formula3.png)
+
+# ESTIMACION Y PRUEBA DE HIPOTESIS
+
+![](imagenes/formula4.png)
+![](imagenes/formula5.png)
+![](imagenes/formula6.png)
+
+# ANALISIS DE REGRESION
+
+![](imagenes/formula7.png)
+
+# ANALISIS DE REGRESION NO LINEAL
+
+![](imagenes/tabla12.png)
+
+# DISENO DE UN FACTOR (DCA)
+
+![](imagenes/tabla13.png)
+
+# DISENO DE BLOQUES AL AZAR (DBCA)
+
+![](imagenes/tabla14.png)
+
+# DISENO FACTORIAL (AXB)
+
+![](imagenes/tabla15.png)
+
+# SERIES DE TIEMPO
+
+![](imagenes/tabla16.png)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# TABLAS ESTADISTICAS
+
+## TABLA DE NUMEROS ALEATORIOS
+
+![](imagenes/tabla1.png)
+
+## TABLA DE LA DISTRIBUCION NORMAL ESTANDAR
+
+![](imagenes/tabla2.png)
+
+## TABLA DE LA DISTRIBUCION NORMAL
+
+![](imagenes/tabla3.png)
+
+## TABLA DE LA DISTRIBUCION T-STUDENT
+
+![](imagenes/tabla4.png)
+![](imagenes/tabla5.png)
+
+## TABLA DE LA DISTRIBUCION JI-CUADRADO
+
+![](imagenes/tabla6.png)
+![](imagenes/tabla7.png)
+
+## TABLA DE LA DISTRIBUCION F
+
+![](imagenes/tabla8.png)
+![](imagenes/tabla9.png)
+![](imagenes/tabla10.png)
+![](imagenes/tabla11.png)
+

@@ -11,7 +11,7 @@
 
 
 
-<title>Terminos Estadisticos</title>
+<title>Conceptos Basicos</title>
 
 <script src="site_libs/header-attrs-2.14.3/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -345,41 +345,42 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="about.html">Terminos Estadisticos</a>
+  <a href="about.html">Conceptos Basicos</a>
+</li>
+<li>
+  <a href="Concepto.html">
+    <span class="fa fa-info"></span>
+     
+    Muestreo Aleatorio Simple
+  </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Distribuciones
+    Distribuciones asociadas al muestreo
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="distribucion1.html">Distribuciones Muestrales Poblacion Infinita</a>
+      <a href="distribucion1.html">Distribucion Chi-Cuadrado</a>
     </li>
     <li>
-      <a href="distribucion2.html">Distribuciones Muestrales Poblacion finita</a>
+      <a href="distribucion2.html">Distribucion t de Student</a>
     </li>
     <li>
-      <a href="distribucion3.html">Distribuciones muestral de proporciones</a>
-    </li>
-    <li>
-      <a href="distribucion4.html">Distribuciones muestral de diferencias de medias</a>
-    </li>
-    <li>
-      <a href="distribucion5.html">Distribuciones muestral de diferencias de proporciones</a>
+      <a href="distribucion3.html">Distribucion F de Snedecor</a>
     </li>
   </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Estimacion
+    Distribucion de estadisticos muestrales
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="estimacionP.html">Estimacion Puntual</a>
+      <a href="estimacionP.html">Concepto de estadistico y distribucion muestral</a>
     </li>
     <li>
       <a href="estimacionI.html">Estimacion por Intervalos</a>
@@ -388,6 +389,9 @@ div.tocify {
       <a href="estimacionIC.html">Estimacion de parametros por intervalos de confianza</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="formulas.html">Formulas</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -408,24 +412,75 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Terminos Estadisticos</h1>
+<h1 class="title toc-ignore">Conceptos Basicos</h1>
 
 </div>
 
 
 <p><img src="imagenes/termEsta.jpg" /></p>
-<div id="parametro" class="section level1">
-<h1>Parametro</h1>
-<p>Un parametro estadistico es un numero que se obtiene a partir de los
-datos de una muestra estadistica. Los parametros estadisticos tambien se
-conocen como estadisticos descriptivos. <strong>sirven</strong> para
-sintetizar o resumir la informacion dada por una tabla o por una
-grafica. En otras palabras, dados unos pocos parametros estadisticos se
-puede tener una idea general de la distribucion de la informacion.
-<strong>dan</strong> un buen resumen cuando se conoce la distribucion de
-la poblacion. En particular, si la muestra proviene de una distribucion
-normal, entonces el promedio tipico y la desviacion estandar dan un buen
-resumen de la distribucion.</p>
+<div id="poblacion" class="section level2">
+<h2>Poblacion</h2>
+<p>Es el colectivo que abarca a todos los elementos cuya caracteristica
+o caracteristicas queremos estudiar;dicho de otra manera, es el conjunto
+entero al que se desea describir o del que se necesita establecer
+conclusiones. Como ejemplos de poblaciones, podemos citar: todos los
+estudiantes de la Universidad Central del Ecuador, o los articulos
+producidos en una semana en una determinada fabrica.Por su tamano, las
+poblaciones pueden ser finitas o infinitas.</p>
+</div>
+<div id="muestra" class="section level2">
+<h2>Muestra</h2>
+<p>Es un conjunto de elementos seleccionados de una poblacion de acuerdo
+a un plan de accion previamente establecido (muestreo), para obtener
+conclusiones que pueden ser extensivas hacia toda la poblacion. Ejemplos
+constituyen las muestras que escogen las empresas encuestadoras en
+estudios de sondeos de opinion, o la seleccion de un grupo de articulos
+recibidos en una bodega para estimar las condiciones de todo un
+embarque.</p>
+</div>
+<div id="censo" class="section level2">
+<h2>Censo</h2>
+<p>Es el estudio de todos y cada uno de los elementos de una poblacion.
+Esta condicion hace que este tipo de estudios no sean muy frecuentes,por
+cuanto la recoleccion de toda esa informacion, sobre todo cuando el
+tamano de la poblacion es muy grande o sus elementos se encuentran muy
+dispersos, sea muy costosa.Ejemplo: ultimo censo de poblacion y vivienda
+que se realizo en Ecuador en noviembre de 2010.</p>
+</div>
+<div id="muestreo" class="section level2">
+<h2>Muestreo</h2>
+<p>Es la tecnica que nos permite seleccionar muestras adecuadas de una
+poblacion de estudio. El muestreo debe conducir a la obtencion de una
+muestra representativa de la poblacion de donde proviene, esta condicion
+establece que cada elemento de la poblacion tiene la misma probabilidad
+de ser incluida en la muestra. El estudio de seleccion de muestras, en
+si constituye todoun estudio por menorizado, que no atane al estudio en
+este texto.</p>
+</div>
+<div id="division-de-la-estadistica" class="section level1">
+<h1>Division de la Estadistica</h1>
+<div id="estadistica-descriptiva" class="section level2">
+<h2>Estadistica descriptiva</h2>
+<p>Es la parte de la estadistica que permite analizar todo un conjunto
+de datos,de los cuales se extraen conclusiones valederas, unicamente
+para ese conjunto. Para realizar este analisis se procede a la
+recoleccion y representacion de la informacion obtenida. Como ejemplo de
+estas estadisticas podemos citar a aquellas que se obtienen generalmente
+en los deportes, en los rendimientos academicos de los estudiantes de
+una determinada materia, en los negocios al determinar las ventas
+obtenidas mensualmente en un determinado ano por una empresa en
+particular. # Parametro Un parametro estadistico es un numero que se
+obtiene a partir de los datos de una muestra estadistica. Los parametros
+estadisticos tambien se conocen como estadisticos descriptivos.</p>
+<p><strong>sirven</strong> para sintetizar o resumir la informacion dada
+por una tabla o por una grafica. En otras palabras, dados unos pocos
+parametros estadisticos se puede tener una idea general de la
+distribucion de la informacion.</p>
+<p><strong>dan</strong> un buen resumen cuando se conoce la distribucion
+de la poblacion. En particular, si la muestra proviene de una
+distribucion normal, entonces el promedio tipico y la desviacion
+estandar dan un buen resumen de la distribucion.</p>
+</div>
 </div>
 <div id="estadigrafos" class="section level1">
 <h1>Estadigrafos</h1>
@@ -499,23 +554,27 @@ se llama desviacion de un dato respecto al promedio, que denotamos por
 <div id="hipotesis" class="section level1">
 <h1>Hipotesis</h1>
 <p>Cualquier teoria que formule posibles lineas de trabajo experimental.
-Ver hipotesis nula y alternativa.</p>
+hipotesis nula y alternativa.</p>
+</div>
+<div id="inferencia-estadistica" class="section level1">
+<h1>Inferencia estadistica</h1>
+<p><img src="imagenes/inferencia.png" /></p>
 </div>
 <div id="bibliografias" class="section level1">
 <h1>BIBLIOGRAFIAS</h1>
-<p><img src="imagenes/bibliografias.jpg" /></p>
-<p>*[<a
+<p><img src="imagenes/ICON.jpg" /></p>
+<p>-[<a
 href="https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib0900/Libro.pdf"
 class="uri">https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib0900/Libro.pdf</a>]</p>
-<p>*[<a
+<p>-[<a
 href="http://www.dspace.uce.edu.ec/bitstream/25000/13720/3/Fundamentos%20B%C3%A1sicos%20de%20Estad%C3%ADstica-Libro.pdf"
 class="uri">http://www.dspace.uce.edu.ec/bitstream/25000/13720/3/Fundamentos%20B%C3%A1sicos%20de%20Estad%C3%ADstica-Libro.pdf</a>]</p>
-<p>*[<a
+<p>-[<a
 href="http://intranet.comunidadandina.org/Documentos/Reuniones/DTrabajo/SG_REG_DIES_IV_dt%202.pdf"
 class="uri">http://intranet.comunidadandina.org/Documentos/Reuniones/DTrabajo/SG_REG_DIES_IV_dt%202.pdf</a>]</p>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlRlcm1pbm9zIEVzdGFkaXN0aWNvcyINCm91dHB1dDoNCiAgaHRtbF9kb2N1bWVudDoNCiAgICBjb2RlX2Rvd25sb2FkOiB0cnVlDQogICAgdG9jOiB0cnVlDQogICAgdG9jX2Zsb2F0OiB0cnVlDQogICAgdGhlbWU6IGNvc21vDQotLS0NCiFbXShpbWFnZW5lcy90ZXJtRXN0YS5qcGcpDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkNCmBgYA0KDQojIFBhcmFtZXRybw0KVW4gcGFyYW1ldHJvIGVzdGFkaXN0aWNvIGVzIHVuIG51bWVybyBxdWUgc2Ugb2J0aWVuZSBhIHBhcnRpciBkZSBsb3MgZGF0b3MgZGUgdW5hIG11ZXN0cmEgZXN0YWRpc3RpY2EuIExvcyBwYXJhbWV0cm9zIGVzdGFkaXN0aWNvcyB0YW1iaWVuIHNlIGNvbm9jZW4gY29tbyBlc3RhZGlzdGljb3MgZGVzY3JpcHRpdm9zLg0KKipzaXJ2ZW4qKiBwYXJhIHNpbnRldGl6YXIgbyByZXN1bWlyIGxhIGluZm9ybWFjaW9uIGRhZGEgcG9yIHVuYSB0YWJsYSBvIHBvciB1bmEgZ3JhZmljYS4gRW4gb3RyYXMgcGFsYWJyYXMsIGRhZG9zIHVub3MgcG9jb3MgcGFyYW1ldHJvcyBlc3RhZGlzdGljb3Mgc2UgcHVlZGUgdGVuZXIgdW5hIGlkZWEgZ2VuZXJhbCBkZSBsYSBkaXN0cmlidWNpb24gZGUgbGEgaW5mb3JtYWNpb24uDQoqKmRhbioqIHVuIGJ1ZW4gcmVzdW1lbiBjdWFuZG8gc2UgY29ub2NlIGxhIGRpc3RyaWJ1Y2lvbiBkZSBsYSBwb2JsYWNpb24uIEVuIHBhcnRpY3VsYXIsIHNpIGxhIG11ZXN0cmEgcHJvdmllbmUgZGUgdW5hIGRpc3RyaWJ1Y2lvbiBub3JtYWwsIGVudG9uY2VzIGVsIHByb21lZGlvIHRpcGljbyB5IGxhIGRlc3ZpYWNpb24gZXN0YW5kYXIgZGFuIHVuIGJ1ZW4gcmVzdW1lbiBkZSBsYSBkaXN0cmlidWNpb24uDQoNCiMgRXN0YWRpZ3JhZm9zDQoNCiMjIDEuIEVzdGFkaWdyYWZvcyBkZSBvcmRlbg0KU29uIGFxdWVsbG9zIHF1ZSBkYW4gaW5mb3JtYWNpb24gYWNlcmNhIGRlbCBvcmRlbiBlbiBsYSBlc3RydWN0dXJhIGRlIHVuYSBtdWVzdHJhLiBZYSBzZSBoYW4gbWVuY2lvbmFkbyBkb3MgZGUgZWxsb3MgcXVlIGFwYXJlY2VuIGVuIGZvcm1hIGluc3RhbnRhbmVhIGFsIG9yZGVuYXIgbGEgbXVlc3RyYTogZWwgbWF4aW1vLCBYKG4pLCB5IGVsIG1pbmltbywgWCgxKS4NCg0KU2UgbGxhbWEgcGVyY2VudGlsIGEgY2FkYSB1bm8gZGUgbG9zIG51bWVyb3MgcXVlIGRpdmlkZW4gbGEgbXVlc3RyYSBlbiAxMDAgcGFydGVzIGlndWFsZXMuIEVuIGNvbnNlY3VlbmNpYSwgZWxsb3Mgc29uIDk5IHkgc2UgZGVub3RhbiBwb3IgUChrKSwgZG9uZGUgayBlcyBlbCBvcmRlbiBkZWwgcGVyY2VudGlsIGluZGljYWRvLiBEYWRvIGVsIHBlcmNlbnRpbCBQKGspLCBlc3RlIGRpdmlkZSBsYSBtdWVzdHJhIGVuIGRvcyBwYXJ0ZXMsIGxhIGluZmVyaW9yIHF1ZSBjb250aWVuZSBlbCBrJSBpbmZlcmlvciBkZSBsYXMgb2JzZXJ2YWNpb25lcyB5IGxhIHN1cGVyaW9yIHF1ZSBjb250aWVuZSBlbCAoMTAwLWslKSBkZSBsYXMgb2JzZXJ2YWNpb25lczsgZW50cmUgZG9zIHBlcmNlbnRpbGVzIGNvbnNlY3V0aXZvcyBlc3RhIGNvbnRlbmlkbyBlbCAxJSBkZSBsYSBtdWVzdHJhLiBFbCBzaWd1aWVudGUgZXNxdWVtYSBncmFmaWNhIGxhcyBkZWZpbmljaW9uZXMgYW50ZXJpb3JlczoNCg0KIyMgMi4gRXN0YWRpZ3JhZm9zIGRlIHRlbmRlbmNpYSBjZW50cmFsDQpDYWRhIHZleiBxdWUgc2Ugb2JzZXJ2YSB1biBmZW5vbWVubyBjdWFudGl0YXRpdm8sIGludGVyZXNhIHNhYmVyIHNpIGxvcyBkYXRvcyByZWNvbGVjdGFkb3Mgc2UgYWdsdXRpbmFuIGVuIHRvcm5vIGEgY2llcnRvcyB2YWxvcmVzIHJlcHJlc2VudGF0aXZvcyBxdWUgc29uIHByb3Bpb3MgZGVsIGZlbm9tZW5vIGVzdHVkaWFkby4NCg0KIyBFc3RhZGlzdGljYQ0KTGEgZXN0YWRpc3RpY2EgZXMgZnVuZGFtZW50YWwgcGFyYSBsYSBpbnZlc3RpZ2FjaW9uLCBwYXJhIGVsIGFuYWxpc2lzIGRlIGRhdG9zLCBjb24gZWwgZmluIGRlIG9idGVuZXIgcmVzdWx0YWRvcyBxdWUgc2lydmFuIGNvbW8gaW5mb3JtYWNpb24gcGFyYSBkZXRlcm1pbmFkYXMgc2l0dWFjaW9uZXMuIEVzdG9zIG1ldG9kb3MgZXN0YWRpc3RpY29zIG5vIHNlIGxpbWl0YW4sIHlhIHF1ZSBsb3MgbWlzbW9zIHB1ZWRlbiBzZXIgYXBsaWNhZG9zIGEgY3VhbHF1aWVyIGNhbXBvIHF1ZSBzZSBkZXNlZSBlc3R1ZGlhci4gQSBwZXNhciBxdWUgbGEgZXN0YWRpc3RpY2EgZXN0YSBpbnRpbWFtZW50ZSByZWxhY2lvbmFkYSBjb24gbGEgbWF0ZW1hdGljYSB0YW1iaWVuIHRpZW5lIHN1IHV0aWxpZGFkIHBhcmEgZWwgYW1iaXRvIHNvY2lhbC4gWSBlbiBiYXNlIGEgbG9zIGVzdHVkaW9zIHF1ZSBzZSBxdWllcmFuIHJlYWxpemFyIHNlIGRlYmUgaGFjZXIgdW5hIGRpZmVyZW5jaWFjaW9uIGVudHJlIGxvcyB0aXBvcyBkZSBlc3RhZGlzdGljYXMuDQoNCiMgQXNpbWV0cmlhDQpFcyBsYSBmYWx0YSBkZSBzaW1ldHJpYSBlbnRyZSBsb3MgZGF0b3MgZGUgdW5hIGRpc3RyaWJ1Y2lvbi4gcmVmaXJlIGEgbGEgY3VydmEgcXVlIGZvcm1hbiBsb3MgdmFsb3JlcyBkZSBsYSBzZXJpZSBwcmVzZW50YSBsYSBtaXNtYSBmb3JtYSBhIGxhIGl6cXVpZXJkYSB5IGRlcmVjaGEgZGUgdW4gdmFsb3IgY2VudHJhbCAobWVkaWEgYXJpdG1ldGljYSkuDQoNCiMgTGEgTWVkaWFuYQ0KRXMgYXF1ZWwgdmFsb3IgcXVlIGRpdmlkZSBsYSBtdWVzdHJhIGVuIGRvcyBwYXJ0ZXMgaWd1YWxlcywgY29tbyBzZSBkaWpvIGFudGVyaW9ybWVudGUuIERlYmUgbm90YXJzZSBxdWUgbGEgbWVkaWFuYSBlcyB1biBlc3RhZGlncmFmbyBkZSBvcmRlbiB5IHRhbWJpZW4gZGUgY2VudHJhbGl6YWNpb24uDQoNCiMgTGEgTWVkaWEgYXJpdG1ldGljYSBvIFByb21lZGlvIGFyaXRtZXRpY28NCkVzIGVsIGVzdGFkaWdyYWZvIGRlIHRlbmRlbmNpYSBjZW50cmFsIG1hcyBjb25vY2lkbywgdXNhZG8geSBhYnVzYWRvLiBQYXJhIHRvZG9zIGVzIHNhYmlkbyBxdWUgZGFkYSB1bmEgY29sZWNjaW9uIGRlIGRhdG9zIFgxLCBYMiwgLi4uLiwgWG4sIGVsIHByb21lZGlvIHNlIGRlZmluZSBjb21vIGxhIHN1bWEgZGUgbG9zIGRhdG9zIGRpdmlkaWRhIHBvciBsYSBjYW50aWRhZCBkZSBkYXRvcywgeSBzZSBkZW5vdGEgcG9yOyBlbiBzaW1ib2xvcyBlbCBwcm9tZWRpbyBlczoNCg0KIVtdKGltYWdlbmVzL21lZGlhLnBuZykNCg0KIyBSYW5nbyBvIFJlY29ycmlkbw0KU2UgZGVmaW5lIGVsIHJhbmdvIG8gcmVjb3JyaWRvIGRlIGxvcyBkYXRvcyBjb21vIGVsIG1heGltbyBtZW5vcyBlbCBtaW5pbW8sIGxvIHF1ZSBlbiBzaW1ib2xvcyBzZSBleHByZXNhIGFzaToNCg0KKipSYW5nbyA9IFgobikgLSBYKDEpKioNCg0KIyBEZXN2aWFjaW9uIEVzdGFuZGFyDQpQYXJhIGRlZmluaXIgbGEgZGVzdmlhY2lvbiBlc3RhbmRhciwgcHJldmlhbWVudGUgcHJlc2VudGFyZW1vcyBsbyBxdWUgc2UgbGxhbWEgZGVzdmlhY2lvbiBkZSB1biBkYXRvIHJlc3BlY3RvIGFsIHByb21lZGlvLCBxdWUgZGVub3RhbW9zIHBvciAiZGkiOg0KDQoqKmQgPSBYMSAtIFgqKg0KDQojIEhpcG90ZXNpcw0KQ3VhbHF1aWVyIHRlb3JpYSBxdWUgZm9ybXVsZSBwb3NpYmxlcyBsaW5lYXMgZGUgdHJhYmFqbyBleHBlcmltZW50YWwuIFZlcg0KaGlwb3Rlc2lzIG51bGEgeSBhbHRlcm5hdGl2YS4NCg0KIyBCSUJMSU9HUkFGSUFTICAgICANCg0KIVtdKGltYWdlbmVzL2JpYmxpb2dyYWZpYXMuanBnKQ0KDQoqW2h0dHBzOi8vd3d3LmluZWkuZ29iLnBlL21lZGlhL01lbnVSZWN1cnNpdm8vcHVibGljYWNpb25lc19kaWdpdGFsZXMvRXN0L0xpYjA5MDAvTGlicm8ucGRmXQ0KDQoqW2h0dHA6Ly93d3cuZHNwYWNlLnVjZS5lZHUuZWMvYml0c3RyZWFtLzI1MDAwLzEzNzIwLzMvRnVuZGFtZW50b3MlMjBCJUMzJUExc2ljb3MlMjBkZSUyMEVzdGFkJUMzJUFEc3RpY2EtTGlicm8ucGRmXQ0KDQoqW2h0dHA6Ly9pbnRyYW5ldC5jb211bmlkYWRhbmRpbmEub3JnL0RvY3VtZW50b3MvUmV1bmlvbmVzL0RUcmFiYWpvL1NHX1JFR19ESUVTX0lWX2R0JTIwMi5wZGZdDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkNvbmNlcHRvcyBCYXNpY29zIg0Kb3V0cHV0Og0KICBodG1sX2RvY3VtZW50Og0KICAgIGNvZGVfZG93bmxvYWQ6IHRydWUNCiAgICB0b2M6IHRydWUNCiAgICB0b2NfZmxvYXQ6IHRydWUNCiAgICB0aGVtZTogY29zbW8NCi0tLQ0KIVtdKGltYWdlbmVzL3Rlcm1Fc3RhLmpwZykNCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQ0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFKQ0KYGBgDQoNCg0KIyMgUG9ibGFjaW9uDQpFcyBlbCBjb2xlY3Rpdm8gcXVlIGFiYXJjYSBhIHRvZG9zIGxvcyBlbGVtZW50b3MgY3V5YSBjYXJhY3RlcmlzdGljYSBvIGNhcmFjdGVyaXN0aWNhcyBxdWVyZW1vcyBlc3R1ZGlhcjtkaWNobyBkZSBvdHJhIG1hbmVyYSwgZXMgZWwgY29uanVudG8gZW50ZXJvIGFsIHF1ZSBzZSBkZXNlYSBkZXNjcmliaXIgbyBkZWwgcXVlIHNlIG5lY2VzaXRhIGVzdGFibGVjZXINCmNvbmNsdXNpb25lcy4gQ29tbyBlamVtcGxvcyBkZSBwb2JsYWNpb25lcywgcG9kZW1vcyBjaXRhcjogdG9kb3MgbG9zIGVzdHVkaWFudGVzIGRlIGxhIFVuaXZlcnNpZGFkIENlbnRyYWwgZGVsIEVjdWFkb3IsIG8gbG9zIGFydGljdWxvcyBwcm9kdWNpZG9zIGVuIHVuYSBzZW1hbmEgZW4gdW5hIGRldGVybWluYWRhIGZhYnJpY2EuUG9yIHN1IHRhbWFubywgbGFzIHBvYmxhY2lvbmVzIHB1ZWRlbiBzZXIgZmluaXRhcyBvIGluZmluaXRhcy4NCg0KIyMgTXVlc3RyYQ0KRXMgdW4gY29uanVudG8gZGUgZWxlbWVudG9zIHNlbGVjY2lvbmFkb3MgZGUgdW5hIHBvYmxhY2lvbiBkZSBhY3VlcmRvIGEgdW4gcGxhbiBkZSBhY2Npb24gcHJldmlhbWVudGUgZXN0YWJsZWNpZG8gKG11ZXN0cmVvKSwgcGFyYSBvYnRlbmVyIGNvbmNsdXNpb25lcyBxdWUgcHVlZGVuIHNlciBleHRlbnNpdmFzIGhhY2lhIHRvZGEgbGEgcG9ibGFjaW9uLiBFamVtcGxvcyBjb25zdGl0dXllbiBsYXMgbXVlc3RyYXMgcXVlIGVzY29nZW4gbGFzIGVtcHJlc2FzIGVuY3Vlc3RhZG9yYXMgZW4gZXN0dWRpb3MgZGUgc29uZGVvcyBkZSBvcGluaW9uLCBvIGxhIHNlbGVjY2lvbiBkZSB1biBncnVwbyBkZSBhcnRpY3Vsb3MgcmVjaWJpZG9zIGVuIHVuYSBib2RlZ2EgcGFyYSBlc3RpbWFyIGxhcyBjb25kaWNpb25lcyBkZSB0b2RvIHVuIGVtYmFycXVlLg0KDQojIyBDZW5zbw0KRXMgZWwgZXN0dWRpbyBkZSB0b2RvcyB5IGNhZGEgdW5vIGRlIGxvcyBlbGVtZW50b3MgZGUgdW5hIHBvYmxhY2lvbi4gRXN0YSBjb25kaWNpb24gaGFjZSBxdWUgZXN0ZSB0aXBvIGRlIGVzdHVkaW9zIG5vIHNlYW4gbXV5IGZyZWN1ZW50ZXMscG9yIGN1YW50byBsYSByZWNvbGVjY2lvbiBkZSB0b2RhIGVzYSBpbmZvcm1hY2lvbiwgc29icmUgdG9kbyBjdWFuZG8gZWwNCnRhbWFubyBkZSBsYSBwb2JsYWNpb24gZXMgbXV5IGdyYW5kZSBvIHN1cyBlbGVtZW50b3Mgc2UgZW5jdWVudHJhbiBtdXkgZGlzcGVyc29zLCBzZWEgbXV5IGNvc3Rvc2EuRWplbXBsbzogdWx0aW1vIGNlbnNvIGRlIHBvYmxhY2lvbiB5IHZpdmllbmRhIHF1ZSBzZSByZWFsaXpvIGVuIEVjdWFkb3IgZW4gbm92aWVtYnJlIGRlIDIwMTAuDQoNCiMjIE11ZXN0cmVvDQpFcyBsYSB0ZWNuaWNhIHF1ZSBub3MgcGVybWl0ZSBzZWxlY2Npb25hciBtdWVzdHJhcyBhZGVjdWFkYXMgZGUgdW5hIHBvYmxhY2lvbiBkZSBlc3R1ZGlvLiBFbCBtdWVzdHJlbyBkZWJlIGNvbmR1Y2lyIGEgbGEgb2J0ZW5jaW9uIGRlIHVuYSBtdWVzdHJhIHJlcHJlc2VudGF0aXZhIGRlIGxhIHBvYmxhY2lvbiBkZSBkb25kZSBwcm92aWVuZSwgZXN0YQ0KY29uZGljaW9uIGVzdGFibGVjZSBxdWUgY2FkYSBlbGVtZW50byBkZSBsYSBwb2JsYWNpb24gdGllbmUgbGEgbWlzbWEgcHJvYmFiaWxpZGFkIGRlIHNlciBpbmNsdWlkYSBlbiBsYSBtdWVzdHJhLiBFbCBlc3R1ZGlvIGRlIHNlbGVjY2lvbiBkZSBtdWVzdHJhcywgZW4gc2kgY29uc3RpdHV5ZSB0b2RvdW4gZXN0dWRpbyBwb3IgbWVub3JpemFkbywgcXVlIG5vIGF0YW5lDQphbCBlc3R1ZGlvIGVuIGVzdGUgdGV4dG8uDQoNCiMgRGl2aXNpb24gZGUgbGEgRXN0YWRpc3RpY2ENCiMjIEVzdGFkaXN0aWNhIGRlc2NyaXB0aXZhDQoNCkVzIGxhIHBhcnRlIGRlIGxhIGVzdGFkaXN0aWNhIHF1ZSBwZXJtaXRlIGFuYWxpemFyIHRvZG8gdW4gY29uanVudG8gZGUgZGF0b3MsZGUgbG9zIGN1YWxlcyBzZSBleHRyYWVuIGNvbmNsdXNpb25lcyB2YWxlZGVyYXMsIHVuaWNhbWVudGUgcGFyYSBlc2UgY29uanVudG8uIFBhcmEgcmVhbGl6YXIgZXN0ZSBhbmFsaXNpcyBzZSBwcm9jZWRlIGEgbGEgcmVjb2xlY2Npb24geQ0KcmVwcmVzZW50YWNpb24gZGUgbGEgaW5mb3JtYWNpb24gb2J0ZW5pZGEuIENvbW8gZWplbXBsbyBkZSBlc3RhcyBlc3RhZGlzdGljYXMgcG9kZW1vcyBjaXRhciBhIGFxdWVsbGFzIHF1ZSBzZSBvYnRpZW5lbiBnZW5lcmFsbWVudGUgZW4gbG9zIGRlcG9ydGVzLCBlbiBsb3MgcmVuZGltaWVudG9zIGFjYWRlbWljb3MgZGUgbG9zIGVzdHVkaWFudGVzIGRlIHVuYQ0KZGV0ZXJtaW5hZGEgbWF0ZXJpYSwgZW4gbG9zIG5lZ29jaW9zIGFsIGRldGVybWluYXIgbGFzIHZlbnRhcyBvYnRlbmlkYXMgbWVuc3VhbG1lbnRlIGVuIHVuIGRldGVybWluYWRvIGFubyBwb3IgdW5hIGVtcHJlc2EgZW4gcGFydGljdWxhci4NCiMgUGFyYW1ldHJvDQpVbiBwYXJhbWV0cm8gZXN0YWRpc3RpY28gZXMgdW4gbnVtZXJvIHF1ZSBzZSBvYnRpZW5lIGEgcGFydGlyIGRlIGxvcyBkYXRvcyBkZSB1bmEgbXVlc3RyYSBlc3RhZGlzdGljYS4gTG9zIHBhcmFtZXRyb3MgZXN0YWRpc3RpY29zIHRhbWJpZW4gc2UgY29ub2NlbiBjb21vIGVzdGFkaXN0aWNvcyBkZXNjcmlwdGl2b3MuDQoNCioqc2lydmVuKiogcGFyYSBzaW50ZXRpemFyIG8gcmVzdW1pciBsYSBpbmZvcm1hY2lvbiBkYWRhIHBvciB1bmEgdGFibGEgbyBwb3IgdW5hIGdyYWZpY2EuIEVuIG90cmFzIHBhbGFicmFzLCBkYWRvcyB1bm9zIHBvY29zIHBhcmFtZXRyb3MgZXN0YWRpc3RpY29zIHNlIHB1ZWRlIHRlbmVyIHVuYSBpZGVhIGdlbmVyYWwgZGUgbGEgZGlzdHJpYnVjaW9uIGRlIGxhIGluZm9ybWFjaW9uLg0KDQoqKmRhbioqIHVuIGJ1ZW4gcmVzdW1lbiBjdWFuZG8gc2UgY29ub2NlIGxhIGRpc3RyaWJ1Y2lvbiBkZSBsYSBwb2JsYWNpb24uIEVuIHBhcnRpY3VsYXIsIHNpIGxhIG11ZXN0cmEgcHJvdmllbmUgZGUgdW5hIGRpc3RyaWJ1Y2lvbiBub3JtYWwsIGVudG9uY2VzIGVsIHByb21lZGlvIHRpcGljbyB5IGxhIGRlc3ZpYWNpb24gZXN0YW5kYXIgZGFuIHVuIGJ1ZW4gcmVzdW1lbiBkZSBsYSBkaXN0cmlidWNpb24uDQoNCiMgRXN0YWRpZ3JhZm9zDQoNCiMjIDEuIEVzdGFkaWdyYWZvcyBkZSBvcmRlbg0KU29uIGFxdWVsbG9zIHF1ZSBkYW4gaW5mb3JtYWNpb24gYWNlcmNhIGRlbCBvcmRlbiBlbiBsYSBlc3RydWN0dXJhIGRlIHVuYSBtdWVzdHJhLiBZYSBzZSBoYW4gbWVuY2lvbmFkbyBkb3MgZGUgZWxsb3MgcXVlIGFwYXJlY2VuIGVuIGZvcm1hIGluc3RhbnRhbmVhIGFsIG9yZGVuYXIgbGEgbXVlc3RyYTogZWwgbWF4aW1vLCBYKG4pLCB5IGVsIG1pbmltbywgWCgxKS4NCg0KU2UgbGxhbWEgcGVyY2VudGlsIGEgY2FkYSB1bm8gZGUgbG9zIG51bWVyb3MgcXVlIGRpdmlkZW4gbGEgbXVlc3RyYSBlbiAxMDAgcGFydGVzIGlndWFsZXMuIEVuIGNvbnNlY3VlbmNpYSwgZWxsb3Mgc29uIDk5IHkgc2UgZGVub3RhbiBwb3IgUChrKSwgZG9uZGUgayBlcyBlbCBvcmRlbiBkZWwgcGVyY2VudGlsIGluZGljYWRvLiBEYWRvIGVsIHBlcmNlbnRpbCBQKGspLCBlc3RlIGRpdmlkZSBsYSBtdWVzdHJhIGVuIGRvcyBwYXJ0ZXMsIGxhIGluZmVyaW9yIHF1ZSBjb250aWVuZSBlbCBrJSBpbmZlcmlvciBkZSBsYXMgb2JzZXJ2YWNpb25lcyB5IGxhIHN1cGVyaW9yIHF1ZSBjb250aWVuZSBlbCAoMTAwLWslKSBkZSBsYXMgb2JzZXJ2YWNpb25lczsgZW50cmUgZG9zIHBlcmNlbnRpbGVzIGNvbnNlY3V0aXZvcyBlc3RhIGNvbnRlbmlkbyBlbCAxJSBkZSBsYSBtdWVzdHJhLiBFbCBzaWd1aWVudGUgZXNxdWVtYSBncmFmaWNhIGxhcyBkZWZpbmljaW9uZXMgYW50ZXJpb3JlczoNCg0KIyMgMi4gRXN0YWRpZ3JhZm9zIGRlIHRlbmRlbmNpYSBjZW50cmFsDQpDYWRhIHZleiBxdWUgc2Ugb2JzZXJ2YSB1biBmZW5vbWVubyBjdWFudGl0YXRpdm8sIGludGVyZXNhIHNhYmVyIHNpIGxvcyBkYXRvcyByZWNvbGVjdGFkb3Mgc2UgYWdsdXRpbmFuIGVuIHRvcm5vIGEgY2llcnRvcyB2YWxvcmVzIHJlcHJlc2VudGF0aXZvcyBxdWUgc29uIHByb3Bpb3MgZGVsIGZlbm9tZW5vIGVzdHVkaWFkby4NCg0KIyBFc3RhZGlzdGljYQ0KTGEgZXN0YWRpc3RpY2EgZXMgZnVuZGFtZW50YWwgcGFyYSBsYSBpbnZlc3RpZ2FjaW9uLCBwYXJhIGVsIGFuYWxpc2lzIGRlIGRhdG9zLCBjb24gZWwgZmluIGRlIG9idGVuZXIgcmVzdWx0YWRvcyBxdWUgc2lydmFuIGNvbW8gaW5mb3JtYWNpb24gcGFyYSBkZXRlcm1pbmFkYXMgc2l0dWFjaW9uZXMuIEVzdG9zIG1ldG9kb3MgZXN0YWRpc3RpY29zIG5vIHNlIGxpbWl0YW4sIHlhIHF1ZSBsb3MgbWlzbW9zIHB1ZWRlbiBzZXIgYXBsaWNhZG9zIGEgY3VhbHF1aWVyIGNhbXBvIHF1ZSBzZSBkZXNlZSBlc3R1ZGlhci4gQSBwZXNhciBxdWUgbGEgZXN0YWRpc3RpY2EgZXN0YSBpbnRpbWFtZW50ZSByZWxhY2lvbmFkYSBjb24gbGEgbWF0ZW1hdGljYSB0YW1iaWVuIHRpZW5lIHN1IHV0aWxpZGFkIHBhcmEgZWwgYW1iaXRvIHNvY2lhbC4gWSBlbiBiYXNlIGEgbG9zIGVzdHVkaW9zIHF1ZSBzZSBxdWllcmFuIHJlYWxpemFyIHNlIGRlYmUgaGFjZXIgdW5hIGRpZmVyZW5jaWFjaW9uIGVudHJlIGxvcyB0aXBvcyBkZSBlc3RhZGlzdGljYXMuDQoNCiMgQXNpbWV0cmlhDQpFcyBsYSBmYWx0YSBkZSBzaW1ldHJpYSBlbnRyZSBsb3MgZGF0b3MgZGUgdW5hIGRpc3RyaWJ1Y2lvbi4gcmVmaXJlIGEgbGEgY3VydmEgcXVlIGZvcm1hbiBsb3MgdmFsb3JlcyBkZSBsYSBzZXJpZSBwcmVzZW50YSBsYSBtaXNtYSBmb3JtYSBhIGxhIGl6cXVpZXJkYSB5IGRlcmVjaGEgZGUgdW4gdmFsb3IgY2VudHJhbCAobWVkaWEgYXJpdG1ldGljYSkuDQoNCiMgTGEgTWVkaWFuYQ0KRXMgYXF1ZWwgdmFsb3IgcXVlIGRpdmlkZSBsYSBtdWVzdHJhIGVuIGRvcyBwYXJ0ZXMgaWd1YWxlcywgY29tbyBzZSBkaWpvIGFudGVyaW9ybWVudGUuIERlYmUgbm90YXJzZSBxdWUgbGEgbWVkaWFuYSBlcyB1biBlc3RhZGlncmFmbyBkZSBvcmRlbiB5IHRhbWJpZW4gZGUgY2VudHJhbGl6YWNpb24uDQoNCiMgTGEgTWVkaWEgYXJpdG1ldGljYSBvIFByb21lZGlvIGFyaXRtZXRpY28NCkVzIGVsIGVzdGFkaWdyYWZvIGRlIHRlbmRlbmNpYSBjZW50cmFsIG1hcyBjb25vY2lkbywgdXNhZG8geSBhYnVzYWRvLiBQYXJhIHRvZG9zIGVzIHNhYmlkbyBxdWUgZGFkYSB1bmEgY29sZWNjaW9uIGRlIGRhdG9zIFgxLCBYMiwgLi4uLiwgWG4sIGVsIHByb21lZGlvIHNlIGRlZmluZSBjb21vIGxhIHN1bWEgZGUgbG9zIGRhdG9zIGRpdmlkaWRhIHBvciBsYSBjYW50aWRhZCBkZSBkYXRvcywgeSBzZSBkZW5vdGEgcG9yOyBlbiBzaW1ib2xvcyBlbCBwcm9tZWRpbyBlczoNCg0KIVtdKGltYWdlbmVzL21lZGlhLnBuZykNCg0KIyBSYW5nbyBvIFJlY29ycmlkbw0KU2UgZGVmaW5lIGVsIHJhbmdvIG8gcmVjb3JyaWRvIGRlIGxvcyBkYXRvcyBjb21vIGVsIG1heGltbyBtZW5vcyBlbCBtaW5pbW8sIGxvIHF1ZSBlbiBzaW1ib2xvcyBzZSBleHByZXNhIGFzaToNCg0KKipSYW5nbyA9IFgobikgLSBYKDEpKioNCg0KIyBEZXN2aWFjaW9uIEVzdGFuZGFyDQpQYXJhIGRlZmluaXIgbGEgZGVzdmlhY2lvbiBlc3RhbmRhciwgcHJldmlhbWVudGUgcHJlc2VudGFyZW1vcyBsbyBxdWUgc2UgbGxhbWEgZGVzdmlhY2lvbiBkZSB1biBkYXRvIHJlc3BlY3RvIGFsIHByb21lZGlvLCBxdWUgZGVub3RhbW9zIHBvciAiZGkiOg0KDQoqKmQgPSBYMSAtIFgqKg0KDQojIEhpcG90ZXNpcw0KQ3VhbHF1aWVyIHRlb3JpYSBxdWUgZm9ybXVsZSBwb3NpYmxlcyBsaW5lYXMgZGUgdHJhYmFqbyBleHBlcmltZW50YWwuIA0KaGlwb3Rlc2lzIG51bGEgeSBhbHRlcm5hdGl2YS4NCg0KIyBJbmZlcmVuY2lhIGVzdGFkaXN0aWNhDQoNCiFbXShpbWFnZW5lcy9pbmZlcmVuY2lhLnBuZykNCg0KDQojIEJJQkxJT0dSQUZJQVMgICAgIA0KDQohW10oaW1hZ2VuZXMvSUNPTi5qcGcpDQoNCi1baHR0cHM6Ly93d3cuaW5laS5nb2IucGUvbWVkaWEvTWVudVJlY3Vyc2l2by9wdWJsaWNhY2lvbmVzX2RpZ2l0YWxlcy9Fc3QvTGliMDkwMC9MaWJyby5wZGZdDQoNCi1baHR0cDovL3d3dy5kc3BhY2UudWNlLmVkdS5lYy9iaXRzdHJlYW0vMjUwMDAvMTM3MjAvMy9GdW5kYW1lbnRvcyUyMEIlQzMlQTFzaWNvcyUyMGRlJTIwRXN0YWQlQzMlQURzdGljYS1MaWJyby5wZGZdDQoNCi1baHR0cDovL2ludHJhbmV0LmNvbXVuaWRhZGFuZGluYS5vcmcvRG9jdW1lbnRvcy9SZXVuaW9uZXMvRFRyYWJham8vU0dfUkVHX0RJRVNfSVZfZHQlMjAyLnBkZl0NCg==</div>
 
 
 </div>

@@ -6,28 +6,29 @@ navbar:
     - text: "Introducion"
       icon: fa-info
       href: index.html
-    - text: "Terminos Estadisticos"
+    - text: "Conceptos Basicos"
       href: about.html
-    - text: "Distribuciones"
+    - text: "Muestreo Aleatorio Simple"
+      icon: fa-info
+      href: Concepto.html
+    - text: "Distribuciones asociadas al muestreo"
       menu:
-        - text: "Distribuciones Muestrales Poblacion Infinita"
+        - text: "Distribucion Chi-Cuadrado"
           href: distribucion1.html
-        - text: "Distribuciones Muestrales Poblacion finita"
+        - text: "Distribucion t de Student"
           href: distribucion2.html
-        - text: "Distribuciones muestral de proporciones"
+        - text: "Distribucion F de Snedecor"
           href: distribucion3.html
-        - text: "Distribuciones muestral de diferencias de medias"
-          href: distribucion4.html
-        - text: "Distribuciones muestral de diferencias de proporciones"
-          href: distribucion5.html
-    - text: "Estimacion"
+    - text: "Distribucion de estadisticos muestrales"
       menu:
-        - text: "Estimacion Puntual"
+        - text: "Concepto de estadistico y distribucion muestral"
           href: estimacionP.html
         - text: "Estimacion por Intervalos"
           href: estimacionI.html
         - text: "Estimacion de parametros por intervalos de confianza"
           href: estimacionIC.html
+    - text: "Formulas"
+      href: formulas.html
 
           
 output:

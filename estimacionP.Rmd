@@ -1,0 +1,117 @@
+---
+title: "Concepto de estadistico y distribucion muestral"
+output:
+  html_document:
+    code_download: true
+    toc: true
+    toc_float: true
+    theme: cosmo
+---
+![](imagenes/images.jpg)
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="academicicons/css/academicons.min.css"/>
+
+# Estadistico:
+
+
+Una funcion de los valores de la muestra. Es una variable aleatoria, cuyos valores dependen de la muestra seleccionada. Su distribucion de
+probabilidad, se conoce como **Distribucion muestral del estadistico**
+
+
+
+Sea una poblacion donde se observa la variable aleatoria X. Esta variable X, tendra una distribucion de probabilidad, que puede ser conocida o desconocida, y ciertas caracteristicas o parametros poblacionales
+
+![](imagenes/Screenshot_11.png)
+
+
+![](imagenes/Screenshot_12.png)
+
+
+Definimos los siguientes estadisticos muestrales:
+
+Media muestral:
+
+![](imagenes/Screenshot_14.png)
+
+Varianza muestral:
+
+![](imagenes/Screenshot_15.png)
+
+
+Cuasi-Varianza muestral:
+
+![](imagenes/Screenshot_16.png)
+
+Consideramos todas las posibles muestras de tamano n
+
+![](imagenes/Screenshot_17.png)
+
+Su distribucion de probabilidad -->**Distribucion de la media muestral**
+
+
+
+Esperanza matematica
+
+![](imagenes/Screenshot_18.png)
+
+Varianza
+
+![](imagenes/Screenshot_19.png)
+
+Los estadisticos muestrales, media, varianza y cuasivarianza verifican las siguientes propiedades:
+
+Media muestral
+
+![](imagenes/Screenshot_20.png)
+
+Varianza muestral:
+
+![](imagenes/Screenshot_21.png)
+
+Cuasivarianza muestral
+
+![](imagenes/Screenshot_22.png)
+
+Estas propiedades se verifican siempre, cualquiera que sea la distribucion de la variable X
+
+
+## Ejemplo en poblaciones infinitas
+
+![](imagenes/Screenshot_23.png)
+
+![](imagenes/Screenshot_24.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

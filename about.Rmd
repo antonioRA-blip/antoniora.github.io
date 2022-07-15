@@ -1,5 +1,5 @@
 ---
-title: "Terminos Estadisticos"
+title: "Conceptos Basicos"
 output:
   html_document:
     code_download: true
@@ -12,9 +12,34 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+## Poblacion
+Es el colectivo que abarca a todos los elementos cuya caracteristica o caracteristicas queremos estudiar;dicho de otra manera, es el conjunto entero al que se desea describir o del que se necesita establecer
+conclusiones. Como ejemplos de poblaciones, podemos citar: todos los estudiantes de la Universidad Central del Ecuador, o los articulos producidos en una semana en una determinada fabrica.Por su tamano, las poblaciones pueden ser finitas o infinitas.
+
+## Muestra
+Es un conjunto de elementos seleccionados de una poblacion de acuerdo a un plan de accion previamente establecido (muestreo), para obtener conclusiones que pueden ser extensivas hacia toda la poblacion. Ejemplos constituyen las muestras que escogen las empresas encuestadoras en estudios de sondeos de opinion, o la seleccion de un grupo de articulos recibidos en una bodega para estimar las condiciones de todo un embarque.
+
+## Censo
+Es el estudio de todos y cada uno de los elementos de una poblacion. Esta condicion hace que este tipo de estudios no sean muy frecuentes,por cuanto la recoleccion de toda esa informacion, sobre todo cuando el
+tamano de la poblacion es muy grande o sus elementos se encuentran muy dispersos, sea muy costosa.Ejemplo: ultimo censo de poblacion y vivienda que se realizo en Ecuador en noviembre de 2010.
+
+## Muestreo
+Es la tecnica que nos permite seleccionar muestras adecuadas de una poblacion de estudio. El muestreo debe conducir a la obtencion de una muestra representativa de la poblacion de donde proviene, esta
+condicion establece que cada elemento de la poblacion tiene la misma probabilidad de ser incluida en la muestra. El estudio de seleccion de muestras, en si constituye todoun estudio por menorizado, que no atane
+al estudio en este texto.
+
+# Division de la Estadistica
+## Estadistica descriptiva
+
+Es la parte de la estadistica que permite analizar todo un conjunto de datos,de los cuales se extraen conclusiones valederas, unicamente para ese conjunto. Para realizar este analisis se procede a la recoleccion y
+representacion de la informacion obtenida. Como ejemplo de estas estadisticas podemos citar a aquellas que se obtienen generalmente en los deportes, en los rendimientos academicos de los estudiantes de una
+determinada materia, en los negocios al determinar las ventas obtenidas mensualmente en un determinado ano por una empresa en particular.
 # Parametro
 Un parametro estadistico es un numero que se obtiene a partir de los datos de una muestra estadistica. Los parametros estadisticos tambien se conocen como estadisticos descriptivos.
+
 **sirven** para sintetizar o resumir la informacion dada por una tabla o por una grafica. En otras palabras, dados unos pocos parametros estadisticos se puede tener una idea general de la distribucion de la informacion.
+
 **dan** un buen resumen cuando se conoce la distribucion de la poblacion. En particular, si la muestra proviene de una distribucion normal, entonces el promedio tipico y la desviacion estandar dan un buen resumen de la distribucion.
 
 # Estadigrafos
@@ -52,15 +77,20 @@ Para definir la desviacion estandar, previamente presentaremos lo que se llama d
 **d = X1 - X**
 
 # Hipotesis
-Cualquier teoria que formule posibles lineas de trabajo experimental. Ver
+Cualquier teoria que formule posibles lineas de trabajo experimental. 
 hipotesis nula y alternativa.
+
+# Inferencia estadistica
+
+![](imagenes/inferencia.png)
+
 
 # BIBLIOGRAFIAS     
 
-![](imagenes/bibliografias.jpg)
+![](imagenes/ICON.jpg)
 
-*[https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib0900/Libro.pdf]
+-[https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib0900/Libro.pdf]
 
-*[http://www.dspace.uce.edu.ec/bitstream/25000/13720/3/Fundamentos%20B%C3%A1sicos%20de%20Estad%C3%ADstica-Libro.pdf]
+-[http://www.dspace.uce.edu.ec/bitstream/25000/13720/3/Fundamentos%20B%C3%A1sicos%20de%20Estad%C3%ADstica-Libro.pdf]
 
-*[http://intranet.comunidadandina.org/Documentos/Reuniones/DTrabajo/SG_REG_DIES_IV_dt%202.pdf]
+-[http://intranet.comunidadandina.org/Documentos/Reuniones/DTrabajo/SG_REG_DIES_IV_dt%202.pdf]

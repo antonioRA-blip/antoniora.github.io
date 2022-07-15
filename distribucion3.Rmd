@@ -1,0 +1,47 @@
+---
+title: "Distribucion F de Snedecor"
+output:
+  html_document:
+    code_download: true
+    toc: true
+    toc_float: true
+    theme: cosmo
+---
+![](imagenes/demofdistribution.png)
+
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="academicicons/css/academicons.min.css"/>
+
+
+![](imagenes/Screenshot_7.png)
+
+
+Definimos la variable aleatoria X como:
+
+![](imagenes/Screenshot_8.png)
+
+
+La variable aleatoria X sigue una distribucion F de Snedecor con n y m grados de libertad
+
+
+![](imagenes/Screenshot_9.png)
+
+
+Para valores grandes de n y m, la distribucion F de Snedecor se aproxima a la distribucion Normal.
+
+![](imagenes/Screenshot_10.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

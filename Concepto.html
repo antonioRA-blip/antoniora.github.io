@@ -11,7 +11,7 @@
 
 
 
-<title>Concepto de estadistico y distribucion muestral</title>
+<title>Muestreo Aleatorio Simple</title>
 
 <script src="site_libs/header-attrs-2.14.3/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -412,60 +412,71 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Concepto de estadistico y distribucion
-muestral</h1>
+<h1 class="title toc-ignore">Muestreo Aleatorio Simple</h1>
 
 </div>
 
 
-<p><img src="imagenes/images.jpg" /></p>
+<p><img src="imagenes/mas.webp" /></p>
 <p><link rel="stylesheet" href="styles.css" type="text/css">
 <link rel="stylesheet" href="academicicons/css/academicons.min.css"/></p>
-<div id="estadistico" class="section level1">
-<h1>Estadistico:</h1>
-<p>Una funcion de los valores de la muestra. Es una variable aleatoria,
-cuyos valores dependen de la muestra seleccionada. Su distribucion de
-probabilidad, se conoce como <strong>Distribucion muestral del
-estadistico</strong></p>
-<p>Sea una poblacion donde se observa la variable aleatoria X. Esta
-variable X, tendra una distribucion de probabilidad, que puede ser
-conocida o desconocida, y ciertas caracteristicas o parametros
-poblacionales</p>
-<p><img src="imagenes/Screenshot_11.png" /></p>
-<p><img src="imagenes/Screenshot_12.png" /></p>
-<p>Definimos los siguientes estadisticos muestrales:</p>
-<p>Media muestral:</p>
-<p><img src="imagenes/Screenshot_14.png" /></p>
-<p>Varianza muestral:</p>
-<p><img src="imagenes/Screenshot_15.png" /></p>
-<p>Cuasi-Varianza muestral:</p>
-<p><img src="imagenes/Screenshot_16.png" /></p>
-<p>Consideramos todas las posibles muestras de tamano n</p>
-<p><img src="imagenes/Screenshot_17.png" /></p>
-<p>Su distribucion de probabilidad –&gt;<strong>Distribucion de la media
-muestral</strong></p>
-<p>Esperanza matematica</p>
-<p><img src="imagenes/Screenshot_18.png" /></p>
-<p>Varianza</p>
-<p><img src="imagenes/Screenshot_19.png" /></p>
-<p>Los estadisticos muestrales, media, varianza y cuasivarianza
-verifican las siguientes propiedades:</p>
-<p>Media muestral</p>
-<p><img src="imagenes/Screenshot_20.png" /></p>
-<p>Varianza muestral:</p>
-<p><img src="imagenes/Screenshot_21.png" /></p>
-<p>Cuasivarianza muestral</p>
-<p><img src="imagenes/Screenshot_22.png" /></p>
-<p>Estas propiedades se verifican siempre, cualquiera que sea la
-distribucion de la variable X</p>
+<p>Cada elemento de la poblacion tiene la misma probabilidad de ser
+elegido para formar parte de la muestra y cada muestra del mismo tamano
+tiene la misma probabilidad de ser seleccionada.</p>
+<div id="muestra-aleatoria-simple-de-tamano-n" class="section level1">
+<h1>Muestra aleatoria simple de tamano n</h1>
+<p>Sea una poblacion donde observamos la variable aleatoria X. Una
+muestra aleatoria simple, m.a.s., de tamano n, es un conjunto de n
+variables aleatorias X1, X2, …Xn, que verifican:</p>
+<p>X1, X2, …Xn son :</p>
+<ol style="list-style-type: decimal">
+<li>Independientes entre si</li>
+<li>Cada Xi con identicas caracteristicas que X</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>El muestreo aleatorio simple en poblaciones finitas se realiza
+“con reemplazamiento”, es decir:</p>
+<p>Se selecciona un elemento de la poblacion al azar, se observa el
+valor de la variable aleatoria X, se devuelve a la poblacion y se vuelve
+a seleccionar otro elemento. Asi hasta obtener los n elementos. Este
+procedimiento garantiza la independencia de las observaciones</p>
+<p>La seleccion aleatoria de los elementos se realiza con una tabla de
+numeros aleatorios, o con algun procedimiento informatico.</p></li>
+</ol>
+<div id="pasos-de-un-muestreo" class="section level2">
+<h2>Pasos de un muestreo</h2>
+<ol style="list-style-type: decimal">
+<li><p>Poblacion en la que se observa la variable X</p></li>
+<li><p>Se decide extraer una muestra aleatoria simple de tamano n,
+compuesta por las variables aleatorias X1, X2,….,Xn</p></li>
+<li><p>Se seleccionan n elementos de la poblacion -&gt;
+<strong>muestra</strong></p></li>
+<li><p>Los elementos seleccionados generan n numeros</p>
+<p>x1, x2,….,xn, valores observados de las variables aleatorias X1,
+X2,…,Xn</p></li>
+</ol>
+</div>
+<div id="ejemplo-en-poblaciones-finitas" class="section level2">
+<h2>Ejemplo en poblaciones finitas</h2>
+<p>En un instituto se quiere realizar un estudio sobre el nivel de
+colesterol de los alumnos. Para ello, se decide extraer una muestra
+aleatoria simple de tamano 10.</p>
+<p><img src="imagenes/Screenshot_25.png" /></p>
+</div>
 <div id="ejemplo-en-poblaciones-infinitas" class="section level2">
 <h2>Ejemplo en poblaciones infinitas</h2>
-<p><img src="imagenes/Screenshot_23.png" /></p>
-<p><img src="imagenes/Screenshot_24.png" /></p>
+<p>Se analizan muestras de agua de un rio para estudiar el indice de
+diversidad de especies. Este indice se utiliza para medir el efecto de
+una perturbacion, como la contaminacion del agua, en seres vivos. Puede
+determinarse la diversidad de la poblacion antes y despues de la
+perturbacion. Si el indice tras la perturbacion es mucho mas pequeno
+indica que la perturbacion ha tenido efectos negativos. Para esto, se
+decide extraer una muestra aleatoria simple de tamano 8</p>
+<p><img src="imagenes/Screenshot_26.png" /></p>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkNvbmNlcHRvIGRlIGVzdGFkaXN0aWNvIHkgZGlzdHJpYnVjaW9uIG11ZXN0cmFsIg0Kb3V0cHV0Og0KICBodG1sX2RvY3VtZW50Og0KICAgIGNvZGVfZG93bmxvYWQ6IHRydWUNCiAgICB0b2M6IHRydWUNCiAgICB0b2NfZmxvYXQ6IHRydWUNCiAgICB0aGVtZTogY29zbW8NCi0tLQ0KIVtdKGltYWdlbmVzL2ltYWdlcy5qcGcpDQoNCg0KDQoNCjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0ic3R5bGVzLmNzcyIgdHlwZT0idGV4dC9jc3MiPg0KPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJhY2FkZW1pY2ljb25zL2Nzcy9hY2FkZW1pY29ucy5taW4uY3NzIi8+DQoNCiMgRXN0YWRpc3RpY286DQoNCg0KVW5hIGZ1bmNpb24gZGUgbG9zIHZhbG9yZXMgZGUgbGEgbXVlc3RyYS4gRXMgdW5hIHZhcmlhYmxlIGFsZWF0b3JpYSwgY3V5b3MgdmFsb3JlcyBkZXBlbmRlbiBkZSBsYSBtdWVzdHJhIHNlbGVjY2lvbmFkYS4gU3UgZGlzdHJpYnVjaW9uIGRlDQpwcm9iYWJpbGlkYWQsIHNlIGNvbm9jZSBjb21vICoqRGlzdHJpYnVjaW9uIG11ZXN0cmFsIGRlbCBlc3RhZGlzdGljbyoqDQoNCg0KDQpTZWEgdW5hIHBvYmxhY2lvbiBkb25kZSBzZSBvYnNlcnZhIGxhIHZhcmlhYmxlIGFsZWF0b3JpYSBYLiBFc3RhIHZhcmlhYmxlIFgsIHRlbmRyYSB1bmEgZGlzdHJpYnVjaW9uIGRlIHByb2JhYmlsaWRhZCwgcXVlIHB1ZWRlIHNlciBjb25vY2lkYSBvIGRlc2Nvbm9jaWRhLCB5IGNpZXJ0YXMgY2FyYWN0ZXJpc3RpY2FzIG8gcGFyYW1ldHJvcyBwb2JsYWNpb25hbGVzDQoNCiFbXShpbWFnZW5lcy9TY3JlZW5zaG90XzExLnBuZykNCg0KDQohW10oaW1hZ2VuZXMvU2NyZWVuc2hvdF8xMi5wbmcpDQoNCg0KRGVmaW5pbW9zIGxvcyBzaWd1aWVudGVzIGVzdGFkaXN0aWNvcyBtdWVzdHJhbGVzOg0KDQpNZWRpYSBtdWVzdHJhbDoNCg0KIVtdKGltYWdlbmVzL1NjcmVlbnNob3RfMTQucG5nKQ0KDQpWYXJpYW56YSBtdWVzdHJhbDoNCg0KIVtdKGltYWdlbmVzL1NjcmVlbnNob3RfMTUucG5nKQ0KDQoNCkN1YXNpLVZhcmlhbnphIG11ZXN0cmFsOg0KDQohW10oaW1hZ2VuZXMvU2NyZWVuc2hvdF8xNi5wbmcpDQoNCkNvbnNpZGVyYW1vcyB0b2RhcyBsYXMgcG9zaWJsZXMgbXVlc3RyYXMgZGUgdGFtYW5vIG4NCg0KIVtdKGltYWdlbmVzL1NjcmVlbnNob3RfMTcucG5nKQ0KDQpTdSBkaXN0cmlidWNpb24gZGUgcHJvYmFiaWxpZGFkIC0tPioqRGlzdHJpYnVjaW9uIGRlIGxhIG1lZGlhIG11ZXN0cmFsKioNCg0KDQoNCkVzcGVyYW56YSBtYXRlbWF0aWNhDQoNCiFbXShpbWFnZW5lcy9TY3JlZW5zaG90XzE4LnBuZykNCg0KVmFyaWFuemENCg0KIVtdKGltYWdlbmVzL1NjcmVlbnNob3RfMTkucG5nKQ0KDQpMb3MgZXN0YWRpc3RpY29zIG11ZXN0cmFsZXMsIG1lZGlhLCB2YXJpYW56YSB5IGN1YXNpdmFyaWFuemEgdmVyaWZpY2FuIGxhcyBzaWd1aWVudGVzIHByb3BpZWRhZGVzOg0KDQpNZWRpYSBtdWVzdHJhbA0KDQohW10oaW1hZ2VuZXMvU2NyZWVuc2hvdF8yMC5wbmcpDQoNClZhcmlhbnphIG11ZXN0cmFsOg0KDQohW10oaW1hZ2VuZXMvU2NyZWVuc2hvdF8yMS5wbmcpDQoNCkN1YXNpdmFyaWFuemEgbXVlc3RyYWwNCg0KIVtdKGltYWdlbmVzL1NjcmVlbnNob3RfMjIucG5nKQ0KDQpFc3RhcyBwcm9waWVkYWRlcyBzZSB2ZXJpZmljYW4gc2llbXByZSwgY3VhbHF1aWVyYSBxdWUgc2VhIGxhIGRpc3RyaWJ1Y2lvbiBkZSBsYSB2YXJpYWJsZSBYDQoNCg0KIyMgRWplbXBsbyBlbiBwb2JsYWNpb25lcyBpbmZpbml0YXMNCg0KIVtdKGltYWdlbmVzL1NjcmVlbnNob3RfMjMucG5nKQ0KDQohW10oaW1hZ2VuZXMvU2NyZWVuc2hvdF8yNC5wbmcpDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIk11ZXN0cmVvIEFsZWF0b3JpbyBTaW1wbGUiDQpvdXRwdXQ6DQogIGh0bWxfZG9jdW1lbnQ6DQogICAgY29kZV9kb3dubG9hZDogdHJ1ZQ0KICAgIHRvYzogdHJ1ZQ0KICAgIHRvY19mbG9hdDogdHJ1ZQ0KICAgIHRoZW1lOiBjb3Ntbw0KLS0tDQohW10oaW1hZ2VuZXMvbWFzLndlYnApDQoNCg0KPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJzdHlsZXMuY3NzIiB0eXBlPSJ0ZXh0L2NzcyI+DQo8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9ImFjYWRlbWljaWNvbnMvY3NzL2FjYWRlbWljb25zLm1pbi5jc3MiLz4NCg0KQ2FkYSBlbGVtZW50byBkZSBsYSBwb2JsYWNpb24gdGllbmUgbGEgbWlzbWEgcHJvYmFiaWxpZGFkIGRlIHNlciBlbGVnaWRvIHBhcmEgZm9ybWFyIHBhcnRlIGRlIGxhIG11ZXN0cmEgeSBjYWRhIG11ZXN0cmEgZGVsIG1pc21vIHRhbWFubyB0aWVuZSBsYSBtaXNtYSBwcm9iYWJpbGlkYWQgZGUgc2VyIHNlbGVjY2lvbmFkYS4NCg0KIyBNdWVzdHJhIGFsZWF0b3JpYSBzaW1wbGUgZGUgdGFtYW5vIG4NCg0KU2VhIHVuYSBwb2JsYWNpb24gZG9uZGUgb2JzZXJ2YW1vcyBsYSB2YXJpYWJsZSBhbGVhdG9yaWEgWC4NClVuYSBtdWVzdHJhIGFsZWF0b3JpYSBzaW1wbGUsIG0uYS5zLiwgZGUgdGFtYW5vIG4sIGVzIHVuDQpjb25qdW50byBkZSBuIHZhcmlhYmxlcyBhbGVhdG9yaWFzIFgxLCBYMiwgLi4uWG4sIHF1ZSB2ZXJpZmljYW46DQoNClgxLCBYMiwgLi4uWG4gc29uIDoNCg0KDQoxLiBJbmRlcGVuZGllbnRlcyBlbnRyZSBzaQ0KMi4gQ2FkYSBYaSBjb24gaWRlbnRpY2FzIGNhcmFjdGVyaXN0aWNhcyBxdWUgWA0KDQoNCmEuIEVsIG11ZXN0cmVvIGFsZWF0b3JpbyBzaW1wbGUgZW4gcG9ibGFjaW9uZXMgZmluaXRhcyBzZSByZWFsaXphICJjb24gICAgICByZWVtcGxhemFtaWVudG8iLCBlcyBkZWNpcjoNCg0KICAgIFNlIHNlbGVjY2lvbmEgdW4gZWxlbWVudG8gZGUgbGEgcG9ibGFjaW9uIGFsIGF6YXIsIHNlIG9ic2VydmEgZWwgICAgIHZhbG9yIGRlIGxhIHZhcmlhYmxlIGFsZWF0b3JpYSBYLCBzZSBkZXZ1ZWx2ZSBhIGxhIHBvYmxhY2lvbiB5IHNlIHZ1ZWx2ZSBhIHNlbGVjY2lvbmFyIG90cm8gZWxlbWVudG8uIEFzaSBoYXN0YSBvYnRlbmVyIGxvcyBuIGVsZW1lbnRvcy4gRXN0ZSBwcm9jZWRpbWllbnRvIGdhcmFudGl6YSBsYSBpbmRlcGVuZGVuY2lhIGRlIGxhcyBvYnNlcnZhY2lvbmVzDQoNCiAgICBMYSBzZWxlY2Npb24gYWxlYXRvcmlhIGRlIGxvcyBlbGVtZW50b3Mgc2UgcmVhbGl6YSBjb24gdW5hIHRhYmxhIGRlIG51bWVyb3MgYWxlYXRvcmlvcywgbyBjb24gYWxndW4gcHJvY2VkaW1pZW50byBpbmZvcm1hdGljby4NCg0KIyMgUGFzb3MgZGUgdW4gbXVlc3RyZW8NCg0KMS4gUG9ibGFjaW9uIGVuIGxhIHF1ZSBzZSBvYnNlcnZhIGxhIHZhcmlhYmxlIFgNCjIuIFNlIGRlY2lkZSBleHRyYWVyIHVuYSBtdWVzdHJhIGFsZWF0b3JpYSBzaW1wbGUgZGUgdGFtYW5vIG4sIGNvbXB1ZXN0YSAgICAgcG9yIGxhcyB2YXJpYWJsZXMgYWxlYXRvcmlhcyBYMSwgWDIsLi4uLixYbg0KMy4gU2Ugc2VsZWNjaW9uYW4gbiBlbGVtZW50b3MgZGUgbGEgcG9ibGFjaW9uIC0+ICoqbXVlc3RyYSoqDQo0LiBMb3MgZWxlbWVudG9zIHNlbGVjY2lvbmFkb3MgZ2VuZXJhbiBuIG51bWVyb3MNCg0KICAgICAgeDEsIHgyLC4uLi4seG4sIHZhbG9yZXMgb2JzZXJ2YWRvcyBkZQ0KICAgICAgbGFzIHZhcmlhYmxlcyBhbGVhdG9yaWFzIFgxLCBYMiwuLi4sWG4NCg0KIyMgRWplbXBsbyBlbiBwb2JsYWNpb25lcyBmaW5pdGFzDQoNCkVuIHVuIGluc3RpdHV0byBzZSBxdWllcmUgcmVhbGl6YXIgdW4gZXN0dWRpbyBzb2JyZSBlbCBuaXZlbCBkZSBjb2xlc3Rlcm9sIGRlIGxvcyBhbHVtbm9zLiBQYXJhIGVsbG8sIHNlIGRlY2lkZSBleHRyYWVyIHVuYSBtdWVzdHJhIGFsZWF0b3JpYSBzaW1wbGUgZGUgdGFtYW5vIDEwLg0KDQohW10oaW1hZ2VuZXMvU2NyZWVuc2hvdF8yNS5wbmcpDQogICAgDQojIyBFamVtcGxvIGVuIHBvYmxhY2lvbmVzIGluZmluaXRhcw0KDQpTZSBhbmFsaXphbiBtdWVzdHJhcyBkZSBhZ3VhIGRlIHVuIHJpbyBwYXJhIGVzdHVkaWFyIGVsIGluZGljZSBkZSBkaXZlcnNpZGFkIGRlIGVzcGVjaWVzLiBFc3RlIGluZGljZSBzZSB1dGlsaXphIHBhcmEgbWVkaXIgZWwgZWZlY3RvIGRlIHVuYSBwZXJ0dXJiYWNpb24sIGNvbW8gbGEgY29udGFtaW5hY2lvbiBkZWwgYWd1YSwgZW4gc2VyZXMgdml2b3MuIFB1ZWRlDQpkZXRlcm1pbmFyc2UgbGEgZGl2ZXJzaWRhZCBkZSBsYSBwb2JsYWNpb24gYW50ZXMgeSBkZXNwdWVzIGRlIGxhIHBlcnR1cmJhY2lvbi4gU2kgZWwgaW5kaWNlIHRyYXMgbGEgcGVydHVyYmFjaW9uIGVzIG11Y2hvIG1hcyBwZXF1ZW5vIGluZGljYSBxdWUgbGEgcGVydHVyYmFjaW9uIGhhIHRlbmlkbyBlZmVjdG9zIG5lZ2F0aXZvcy4gUGFyYSBlc3RvLCBzZSBkZWNpZGUgZXh0cmFlciB1bmEgbXVlc3RyYSBhbGVhdG9yaWEgc2ltcGxlIGRlIHRhbWFubyA4DQoNCiFbXShpbWFnZW5lcy9TY3JlZW5zaG90XzI2LnBuZykNCg0KDQo=</div>
 
 
 </div>
@@ -503,7 +514,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("estimacionP.Rmd");
+  window.initializeSourceEmbed("Concepto.Rmd");
 });
 </script>
 

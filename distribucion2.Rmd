@@ -1,0 +1,48 @@
+---
+title: "Distribucion t de Student"
+output:
+  html_document:
+    code_download: true
+    toc: true
+    toc_float: true
+    theme: cosmo
+---
+
+![](imagenes/Fig 7-4.webp)
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="academicicons/css/academicons.min.css"/>
+
+Sean las variables aleatorias, Y y Z, que verifican:
+
+Independientes:
+
+    Z--> N( 0; 1 )
+    Y-->??n
+    
+Definimos la variable aleatoria X como:
+
+![](imagenes/Screenshot_2.png)
+
+La variable aleatoria X sigue una distribucion t de Student con n grados de libertad
+
+![](imagenes/Screenshot_3.png)
+
+Esperanza matematica
+
+![](imagenes/Screenshot_4.png)
+
+Varianza
+
+![](imagenes/Screenshot_5.png)
+
+Para valores grandes de n, la distribucion t de Student se aproxima a la distribucion Normal. La aproximacion se considera aceptable para n > 30
+
+![](imagenes/Screenshot_6.png)
+
+
+
+
+
+
+

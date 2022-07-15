@@ -11,7 +11,7 @@
 
 
 
-<title>distribucion3.knit</title>
+<title>Distribucion F de Snedecor</title>
 
 <script src="site_libs/header-attrs-2.14.3/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,7 +29,12 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
@@ -58,6 +63,11 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
 
 
 
@@ -225,7 +235,73 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
 
 
 
@@ -235,6 +311,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -259,41 +345,42 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
-  <a href="about.html">Terminos Estadisticos</a>
+  <a href="about.html">Conceptos Basicos</a>
+</li>
+<li>
+  <a href="Concepto.html">
+    <span class="fa fa-info"></span>
+     
+    Muestreo Aleatorio Simple
+  </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Distribuciones
+    Distribuciones asociadas al muestreo
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="distribucion1.html">Distribuciones Muestrales Poblacion Infinita</a>
+      <a href="distribucion1.html">Distribucion Chi-Cuadrado</a>
     </li>
     <li>
-      <a href="distribucion2.html">Distribuciones Muestrales Poblacion finita</a>
+      <a href="distribucion2.html">Distribucion t de Student</a>
     </li>
     <li>
-      <a href="distribucion3.html">Distribuciones muestral de proporciones</a>
-    </li>
-    <li>
-      <a href="distribucion4.html">Distribuciones muestral de diferencias de medias</a>
-    </li>
-    <li>
-      <a href="distribucion5.html">Distribuciones muestral de diferencias de proporciones</a>
+      <a href="distribucion3.html">Distribucion F de Snedecor</a>
     </li>
   </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Estimacion
+    Distribucion de estadisticos muestrales
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="estimacionP.html">Estimacion Puntual</a>
+      <a href="estimacionP.html">Concepto de estadistico y distribucion muestral</a>
     </li>
     <li>
       <a href="estimacionI.html">Estimacion por Intervalos</a>
@@ -302,6 +389,9 @@ $(document).ready(function () {
       <a href="estimacionIC.html">Estimacion de parametros por intervalos de confianza</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="formulas.html">Formulas</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -313,16 +403,38 @@ $(document).ready(function () {
 
 <div id="header">
 
-
-
-
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
 </div>
 
 
 
+<h1 class="title toc-ignore">Distribucion F de Snedecor</h1>
+
+</div>
 
 
+<p><img src="imagenes/demofdistribution.png" /></p>
+<p><link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="academicicons/css/academicons.min.css"/></p>
+<p><img src="imagenes/Screenshot_7.png" /></p>
+<p>Definimos la variable aleatoria X como:</p>
+<p><img src="imagenes/Screenshot_8.png" /></p>
+<p>La variable aleatoria X sigue una distribucion F de Snedecor con n y
+m grados de libertad</p>
+<p><img src="imagenes/Screenshot_9.png" /></p>
+<p>Para valores grandes de n y m, la distribucion F de Snedecor se
+aproxima a la distribucion Normal.</p>
+<p><img src="imagenes/Screenshot_10.png" /></p>
 
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkRpc3RyaWJ1Y2lvbiBGIGRlIFNuZWRlY29yIg0Kb3V0cHV0Og0KICBodG1sX2RvY3VtZW50Og0KICAgIGNvZGVfZG93bmxvYWQ6IHRydWUNCiAgICB0b2M6IHRydWUNCiAgICB0b2NfZmxvYXQ6IHRydWUNCiAgICB0aGVtZTogY29zbW8NCi0tLQ0KIVtdKGltYWdlbmVzL2RlbW9mZGlzdHJpYnV0aW9uLnBuZykNCg0KDQo8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9InN0eWxlcy5jc3MiIHR5cGU9InRleHQvY3NzIj4NCjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iYWNhZGVtaWNpY29ucy9jc3MvYWNhZGVtaWNvbnMubWluLmNzcyIvPg0KDQoNCiFbXShpbWFnZW5lcy9TY3JlZW5zaG90XzcucG5nKQ0KDQoNCkRlZmluaW1vcyBsYSB2YXJpYWJsZSBhbGVhdG9yaWEgWCBjb21vOg0KDQohW10oaW1hZ2VuZXMvU2NyZWVuc2hvdF84LnBuZykNCg0KDQpMYSB2YXJpYWJsZSBhbGVhdG9yaWEgWCBzaWd1ZSB1bmEgZGlzdHJpYnVjaW9uIEYgZGUgU25lZGVjb3IgY29uIG4geSBtIGdyYWRvcyBkZSBsaWJlcnRhZA0KDQoNCiFbXShpbWFnZW5lcy9TY3JlZW5zaG90XzkucG5nKQ0KDQoNClBhcmEgdmFsb3JlcyBncmFuZGVzIGRlIG4geSBtLCBsYSBkaXN0cmlidWNpb24gRiBkZSBTbmVkZWNvciBzZSBhcHJveGltYSBhIGxhIGRpc3RyaWJ1Y2lvbiBOb3JtYWwuDQoNCiFbXShpbWFnZW5lcy9TY3JlZW5zaG90XzEwLnBuZykNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQo=</div>
+
+
+</div>
+</div>
 
 </div>
 
@@ -354,7 +466,41 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("distribucion3.Rmd");
+});
+</script>
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

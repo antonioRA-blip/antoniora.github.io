@@ -11,7 +11,7 @@
 
 
 
-<title>distribucion4.knit</title>
+<title>FORMULAS</title>
 
 <script src="site_libs/header-attrs-2.14.3/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,7 +29,12 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
@@ -58,6 +63,11 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
 
 
 
@@ -225,7 +235,73 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
 
 
 
@@ -235,6 +311,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -259,41 +345,42 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
-  <a href="about.html">Terminos Estadisticos</a>
+  <a href="about.html">Conceptos Basicos</a>
+</li>
+<li>
+  <a href="Concepto.html">
+    <span class="fa fa-info"></span>
+     
+    Muestreo Aleatorio Simple
+  </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Distribuciones
+    Distribuciones asociadas al muestreo
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="distribucion1.html">Distribuciones Muestrales Poblacion Infinita</a>
+      <a href="distribucion1.html">Distribucion Chi-Cuadrado</a>
     </li>
     <li>
-      <a href="distribucion2.html">Distribuciones Muestrales Poblacion finita</a>
+      <a href="distribucion2.html">Distribucion t de Student</a>
     </li>
     <li>
-      <a href="distribucion3.html">Distribuciones muestral de proporciones</a>
-    </li>
-    <li>
-      <a href="distribucion4.html">Distribuciones muestral de diferencias de medias</a>
-    </li>
-    <li>
-      <a href="distribucion5.html">Distribuciones muestral de diferencias de proporciones</a>
+      <a href="distribucion3.html">Distribucion F de Snedecor</a>
     </li>
   </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Estimacion
+    Distribucion de estadisticos muestrales
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="estimacionP.html">Estimacion Puntual</a>
+      <a href="estimacionP.html">Concepto de estadistico y distribucion muestral</a>
     </li>
     <li>
       <a href="estimacionI.html">Estimacion por Intervalos</a>
@@ -302,6 +389,9 @@ $(document).ready(function () {
       <a href="estimacionIC.html">Estimacion de parametros por intervalos de confianza</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="formulas.html">Formulas</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -313,16 +403,96 @@ $(document).ready(function () {
 
 <div id="header">
 
-
-
-
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
 </div>
 
 
 
+<h1 class="title toc-ignore">FORMULAS</h1>
+
+</div>
 
 
+<div id="medidas-descriptivas" class="section level1">
+<h1>MEDIDAS DESCRIPTIVAS</h1>
+<p><img src="imagenes/formula1.png" /> <img
+src="imagenes/formula2.png" /></p>
+</div>
+<div id="distribuciones-de-probabilidad" class="section level1">
+<h1>DISTRIBUCIONES DE PROBABILIDAD</h1>
+<p><img src="imagenes/formula3.png" /></p>
+</div>
+<div id="estimacion-y-prueba-de-hipotesis" class="section level1">
+<h1>ESTIMACION Y PRUEBA DE HIPOTESIS</h1>
+<p><img src="imagenes/formula4.png" /> <img
+src="imagenes/formula5.png" /> <img src="imagenes/formula6.png" /></p>
+</div>
+<div id="analisis-de-regresion" class="section level1">
+<h1>ANALISIS DE REGRESION</h1>
+<p><img src="imagenes/formula7.png" /></p>
+</div>
+<div id="analisis-de-regresion-no-lineal" class="section level1">
+<h1>ANALISIS DE REGRESION NO LINEAL</h1>
+<p><img src="imagenes/tabla12.png" /></p>
+</div>
+<div id="diseno-de-un-factor-dca" class="section level1">
+<h1>DISENO DE UN FACTOR (DCA)</h1>
+<p><img src="imagenes/tabla13.png" /></p>
+</div>
+<div id="diseno-de-bloques-al-azar-dbca" class="section level1">
+<h1>DISENO DE BLOQUES AL AZAR (DBCA)</h1>
+<p><img src="imagenes/tabla14.png" /></p>
+</div>
+<div id="diseno-factorial-axb" class="section level1">
+<h1>DISENO FACTORIAL (AXB)</h1>
+<p><img src="imagenes/tabla15.png" /></p>
+</div>
+<div id="series-de-tiempo" class="section level1">
+<h1>SERIES DE TIEMPO</h1>
+<p><img src="imagenes/tabla16.png" /></p>
+</div>
+<div id="tablas-estadisticas" class="section level1">
+<h1>TABLAS ESTADISTICAS</h1>
+<div id="tabla-de-numeros-aleatorios" class="section level2">
+<h2>TABLA DE NUMEROS ALEATORIOS</h2>
+<p><img src="imagenes/tabla1.png" /></p>
+</div>
+<div id="tabla-de-la-distribucion-normal-estandar"
+class="section level2">
+<h2>TABLA DE LA DISTRIBUCION NORMAL ESTANDAR</h2>
+<p><img src="imagenes/tabla2.png" /></p>
+</div>
+<div id="tabla-de-la-distribucion-normal" class="section level2">
+<h2>TABLA DE LA DISTRIBUCION NORMAL</h2>
+<p><img src="imagenes/tabla3.png" /></p>
+</div>
+<div id="tabla-de-la-distribucion-t-student" class="section level2">
+<h2>TABLA DE LA DISTRIBUCION T-STUDENT</h2>
+<p><img src="imagenes/tabla4.png" /> <img
+src="imagenes/tabla5.png" /></p>
+</div>
+<div id="tabla-de-la-distribucion-ji-cuadrado" class="section level2">
+<h2>TABLA DE LA DISTRIBUCION JI-CUADRADO</h2>
+<p><img src="imagenes/tabla6.png" /> <img
+src="imagenes/tabla7.png" /></p>
+</div>
+<div id="tabla-de-la-distribucion-f" class="section level2">
+<h2>TABLA DE LA DISTRIBUCION F</h2>
+<p><img src="imagenes/tabla8.png" /> <img src="imagenes/tabla9.png" />
+<img src="imagenes/tabla10.png" /> <img
+src="imagenes/tabla11.png" /></p>
+</div>
+</div>
 
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkZPUk1VTEFTIg0Kb3V0cHV0Og0KICBodG1sX2RvY3VtZW50Og0KICAgIGNvZGVfZG93bmxvYWQ6IHRydWUNCiAgICB0b2M6IHRydWUNCiAgICB0b2NfZmxvYXQ6IHRydWUNCiAgICB0aGVtZTogY29zbW8NCi0tLQ0KIyBNRURJREFTIERFU0NSSVBUSVZBUw0KIVtdKGltYWdlbmVzL2Zvcm11bGExLnBuZykNCiFbXShpbWFnZW5lcy9mb3JtdWxhMi5wbmcpDQoNCiMgRElTVFJJQlVDSU9ORVMgREUgUFJPQkFCSUxJREFEDQoNCiFbXShpbWFnZW5lcy9mb3JtdWxhMy5wbmcpDQoNCiMgRVNUSU1BQ0lPTiBZIFBSVUVCQSBERSBISVBPVEVTSVMNCg0KIVtdKGltYWdlbmVzL2Zvcm11bGE0LnBuZykNCiFbXShpbWFnZW5lcy9mb3JtdWxhNS5wbmcpDQohW10oaW1hZ2VuZXMvZm9ybXVsYTYucG5nKQ0KDQojIEFOQUxJU0lTIERFIFJFR1JFU0lPTg0KDQohW10oaW1hZ2VuZXMvZm9ybXVsYTcucG5nKQ0KDQojIEFOQUxJU0lTIERFIFJFR1JFU0lPTiBOTyBMSU5FQUwNCg0KIVtdKGltYWdlbmVzL3RhYmxhMTIucG5nKQ0KDQojIERJU0VOTyBERSBVTiBGQUNUT1IgKERDQSkNCg0KIVtdKGltYWdlbmVzL3RhYmxhMTMucG5nKQ0KDQojIERJU0VOTyBERSBCTE9RVUVTIEFMIEFaQVIgKERCQ0EpDQoNCiFbXShpbWFnZW5lcy90YWJsYTE0LnBuZykNCg0KIyBESVNFTk8gRkFDVE9SSUFMIChBWEIpDQoNCiFbXShpbWFnZW5lcy90YWJsYTE1LnBuZykNCg0KIyBTRVJJRVMgREUgVElFTVBPDQoNCiFbXShpbWFnZW5lcy90YWJsYTE2LnBuZykNCg0KYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9DQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUpDQpgYGANCg0KIyBUQUJMQVMgRVNUQURJU1RJQ0FTDQoNCiMjIFRBQkxBIERFIE5VTUVST1MgQUxFQVRPUklPUw0KDQohW10oaW1hZ2VuZXMvdGFibGExLnBuZykNCg0KIyMgVEFCTEEgREUgTEEgRElTVFJJQlVDSU9OIE5PUk1BTCBFU1RBTkRBUg0KDQohW10oaW1hZ2VuZXMvdGFibGEyLnBuZykNCg0KIyMgVEFCTEEgREUgTEEgRElTVFJJQlVDSU9OIE5PUk1BTA0KDQohW10oaW1hZ2VuZXMvdGFibGEzLnBuZykNCg0KIyMgVEFCTEEgREUgTEEgRElTVFJJQlVDSU9OIFQtU1RVREVOVA0KDQohW10oaW1hZ2VuZXMvdGFibGE0LnBuZykNCiFbXShpbWFnZW5lcy90YWJsYTUucG5nKQ0KDQojIyBUQUJMQSBERSBMQSBESVNUUklCVUNJT04gSkktQ1VBRFJBRE8NCg0KIVtdKGltYWdlbmVzL3RhYmxhNi5wbmcpDQohW10oaW1hZ2VuZXMvdGFibGE3LnBuZykNCg0KIyMgVEFCTEEgREUgTEEgRElTVFJJQlVDSU9OIEYNCg0KIVtdKGltYWdlbmVzL3RhYmxhOC5wbmcpDQohW10oaW1hZ2VuZXMvdGFibGE5LnBuZykNCiFbXShpbWFnZW5lcy90YWJsYTEwLnBuZykNCiFbXShpbWFnZW5lcy90YWJsYTExLnBuZykNCg0K</div>
+
+
+</div>
+</div>
 
 </div>
 
@@ -354,7 +524,41 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("formulas.Rmd");
+});
+</script>
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
